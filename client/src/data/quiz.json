@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "question": "What is the capital of Croatia ?",
+      "choices": ["Split", "Osijek", "Zagreb", "Rijeka"],
+      "answer": "Zagreb"
+    },
+    {
+      "question": "What is the capital of Slovenia ?",
+      "choices": ["Celje", "Ljubljana", "Maribor", "Koper"],
+      "answer": "Ljubljana"
+    },
+    {
+      "question": "What is the capital of Austria ?",
+      "choices": ["Graz", "Salzburg", "Innsbruck", "Vienna"],
+      "answer": "Vienna"
+    }
+  ]
+}
