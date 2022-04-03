@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "question": "The University requires all colleges or departments with laboratories to follow the University's Chemical Hygiene Plan (CHP).",
+      "choices": ["True", "False", "Depends", "Cannot say"],
+      "answer": "True"
+    },
+    {
+      "question": "If you believe a work procedure will harm you, you may refuse to perform the procedure.",
+      "choices": ["True", "False", "Depends", "Cannot say"],
+      "answer": "True"
+    },
+    {
+      "question": "Eyewashes are a form of safety equipment:",
+      "choices": ["True", "False", "Depends", "Cannot say"],
+      "answer": "True"
+    },
+    {
+      "question": "University policies are based on federal and state regulations and best practices.",
+      "choices": ["True", "False", "Depends", "Cannot say"],
+      "answer": "True"
+    },
+    {
+      "question": "The University must pay for a medical examination and any necessary treatment:",
+      "choices": [" If you have any signs or symptoms associated with exposure to any hazardous substance used in your laboratory.", "Exposure monitoring of your laboratory reveals an exposure level that is above the PEL.", "You are exposed during a leak, spill, explosion or other hazardous occurrence in your laboratory.", "All of the above."],
+      "answer": "All of the above."
+    },
+    {
+      "question": "Which resource provides safe and compliant practices for using chemicals, and is often used to develop standard operating procedures?",
+      "choices": ["Radiation Protection Manual.", "NRC's Prudent Practices.", "Laboratory Safety Standard.", "Institutional Biosafety Committee."],
+      "answer": "Institutional Biosafety Committee."
+    }
+  ]
+}

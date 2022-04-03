@@ -35,7 +35,7 @@ const Signup = () => {
    const PostData = async (e) =>{
     e.preventDefault();
     const {name, email, password, cpassword} = user;
-
+    setErrors(validate(user));
     console.log("errors " + errors);
     const res = await fetch("/register", {
         method: "POST",
@@ -48,11 +48,11 @@ const Signup = () => {
     })
 
     const data = await res.json();
-    if(data.status === 400){
-        window.alert("invalid reg");
+    if(res.status === 400 || !data){
+        window.alert("Invalid reg");
     }
     else{ // error in this part
-        window.alert("valid reg");
+        window.alert("Valid registration, please sign-in to proceed");
         navigate("/signin");
     }
    }
@@ -70,19 +70,19 @@ const Signup = () => {
                   className='form-input'
                   type='text'
                   name='name'
-                  placeholder='Enter your name'
+                  placeholder='Enter your full name'
                   value={user.name} onChange={handleInputs}
                 />
-                {/* {errors.name && <p className='form-p'>{errors.name}</p>} */}
+                {errors.name && <p className='form-p'>{errors.name}</p>}
               <label for="email">Email</label>
                 <input
                   className='form-input'
                   type='email'
                   name='email'
-                  placeholder='Enter your email'
+                  placeholder='Enter your gsuite email'
                   value={user.email} onChange={handleInputs}
                 />
-                {/* {errors.email && <p className='form-p'>{errors.email}</p>} */}
+                {errors.email && <p className='form-p'>{errors.email}</p>}
               <label for="name">Password</label>
                 <input
                   className='form-input'
@@ -91,7 +91,7 @@ const Signup = () => {
                   placeholder='Enter your password'
                   value={user.password} onChange={handleInputs}
                 />
-                {/* {errors.password && <p className='form-p'>{errors.password}</p>} */}
+                {errors.password && <p className='form-p'>{errors.password}</p>}
               <label for="cpassword">Confirm Password</label>
               <input
                 className='form-input'
@@ -100,7 +100,7 @@ const Signup = () => {
                 placeholder='Confirm your password'
                 value={user.cpassword} onChange={handleInputs}
               />
-              {/* {errors.password2 && <p className='form-p'>{errors.password2}</p>} */}
+              {errors.cpassword && <p className='form-p'>{errors.cpassword}</p>}
 
               <Button
                     whileHover={{ scale: 1.05 }}

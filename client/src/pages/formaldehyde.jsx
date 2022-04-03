@@ -2,15 +2,15 @@ import React, {useEffect, useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import Start from '../components/Quiz/Start';
 import Question from '../components/Quiz/Question';
-import End from '../components/Quiz/Quiz1/End';
+import End from '../components/Quiz/Quiz4/End';
 import ScoreCard from '../components/Quiz/ScoreCard';
 import Modal from '../components/Quiz/Modal';
-import quizData from '../components/Quiz/data/quiz1.json';
+import quizData from '../components/Quiz/data/quiz4.json';
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
 
 let interval;
-const ResearchSafety = () => {
+const Formaldehyde = () => {
     const navigate = useNavigate();
     const [userData, setUserData] = useState({});
     const callHomePage = async () => {
@@ -68,7 +68,7 @@ const ResearchSafety = () => {
       setTime(0);
       navigate("/home")
     }
-    const marks = userData.course1Marks;
+    const marks = userData.course4Marks;
 
     const RenderQuiz = () => {
       if (marks >= 0) {
@@ -116,4 +116,4 @@ const ResearchSafety = () => {
   )
 }
 
-export default ResearchSafety
+export default Formaldehyde;

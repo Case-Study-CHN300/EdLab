@@ -1,17 +1,18 @@
-html,
+/* html,
 body,
 #root {
   height: 100%;
-}
+} */
 
-.App {
+.Quiz_App {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100%;
 }
 
-.App .card {
+.Quiz_App .card {
+  height: 100%;
   max-width: 400px;
   width: 100%;
   text-align: center;
@@ -31,4 +32,4 @@ label.radio+.radio {
 
 label.radio input {
   margin-right: 10px;
-}
+} 

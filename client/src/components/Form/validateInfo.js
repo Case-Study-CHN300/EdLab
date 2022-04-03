@@ -3,13 +3,11 @@ export default function validateInfo(values) {
 
   if (!values.name.trim()) {
     errors.name = "Username required";
-  } else if (/^[\w]+[\w.%+-]*@[\w.-]+\.iitr\.ac\.in$/) {
-    errors.name = "Enter a valid name";
   }
 
   if (!values.email) {
     errors.email = "Email required";
-  } else if (!/\S+@\S+\.\S+/.test(values.email)) {
+  } else if (!/^[\w]+[\w.%+-]*@[\w.-]+\.iitr\.ac\.in$/.test(values.email)) {
     errors.email = "Email address is invalid";
   }
   if (!values.password) {

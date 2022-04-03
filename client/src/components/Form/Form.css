@@ -60,16 +60,16 @@ form *{
     outline: none;
     border: none;
 }
-form-p{
-  color: red;
-  background-color: #080710;
+
+.form-p{
+  color: #AA0000;
 }
 form h3{
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
     text-align: center;
-    color: #080710;
+    color: black;
 }
 
 label{

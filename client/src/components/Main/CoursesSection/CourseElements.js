@@ -6,14 +6,14 @@ export const CoursesContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 4rem;
   @media screen and (max-width: 768px) {
     height: 1100px;
-    margin-top: 10rem;
+    margin-top: 15rem;
   }
 
   @media screen and (max-width: 480px) {
-    height: 1300px;
+    height: 1100px;
   }
 `;
 
@@ -44,7 +44,7 @@ export const CoursesCard = styled.div`
   justify-content: flex-start;
   align-items: center;
   border-radius: 5px;
-  max-height: 340px;
+  height: 300px;
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
@@ -72,7 +72,7 @@ export const CoursesH1 = styled.h1`
 `;
 
 export const CoursesH2 = styled.h2`
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
 `;
 
