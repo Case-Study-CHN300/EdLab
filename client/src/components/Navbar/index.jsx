@@ -19,13 +19,13 @@ import { UserContext } from '../../App';
 
 const Navbar = ({ toggle }) => {
   const {state , dispatch} = useContext(UserContext);
-  const [scrollNav, setScrollNav] = useState(false);
+  const [scrollnav, setscrollnav] = useState(false);
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
-      setScrollNav(true);
+      setscrollnav(true);
     } else {
-      setScrollNav(false);
+      setscrollnav(false);
     }
   };
   useEffect(() => {
@@ -40,7 +40,7 @@ const Navbar = ({ toggle }) => {
       return(
         <>
           <NavBtn1>
-            <NavBtnLink1 scrollNav={scrollNav} to="/logout">Log Out</NavBtnLink1>
+            <NavBtnLink1 scrollnav={scrollnav} to="/logout">Log Out</NavBtnLink1>
           </NavBtn1>
         </>
       )
@@ -49,10 +49,10 @@ const Navbar = ({ toggle }) => {
       return(
         <>
           <NavBtn1>
-            <NavBtnLink1 scrollNav={scrollNav} to="/signup">Sign Up</NavBtnLink1>
+            <NavBtnLink1 scrollnav={scrollnav} to="/signup">Sign Up</NavBtnLink1>
           </NavBtn1>
           <NavBtn2>
-            <NavBtnLink2 scrollNav={scrollNav} to="/signin">Sign In</NavBtnLink2>
+            <NavBtnLink2 scrollnav={scrollnav} to="/signin">Sign In</NavBtnLink2>
           </NavBtn2>
         </>
       )
@@ -60,17 +60,17 @@ const Navbar = ({ toggle }) => {
   }
   return (
     <>
-      <Nav scrollNav={scrollNav}>
+      <Nav scrollnav={scrollnav}>
             <NavbarContainer>
-              <NavLogo scrollNav={scrollNav} to="/" onClick={toggleHome}>
+              <NavLogo scrollnav={scrollnav} to="/" onClick={toggleHome}>
                 Leetcode
               </NavLogo >
-              <MobileIcon scrollNav={scrollNav} onClick={toggle}>
+              <MobileIcon scrollnav={scrollnav} onClick={toggle}>
                 <FaBars />
               </MobileIcon>
               <NavMenu>
                 <NavItem>
-                  <NavLinks scrollNav={scrollNav}
+                  <NavLinks scrollnav={scrollnav}
                     to="about"
                     smooth={true}
                     duration={500}
@@ -82,7 +82,7 @@ const Navbar = ({ toggle }) => {
                   </NavLinks>
                 </NavItem>
                 <NavItem>
-                  <NavLinks scrollNav={scrollNav}
+                  <NavLinks scrollnav={scrollnav}
                     to="discover"
                     smooth={true}
                     duration={500}
@@ -94,7 +94,7 @@ const Navbar = ({ toggle }) => {
                   </NavLinks>
                 </NavItem>
                 <NavItem>
-                  <NavLinks scrollNav={scrollNav}
+                  <NavLinks scrollnav={scrollnav}
                     to="courses"
                     smooth={true}
                     duration={500}

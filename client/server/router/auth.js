@@ -25,7 +25,7 @@ router.post("/register", async (req, res) => {
 
     if (userExist) {
       return res.status(400).json({ error: "Email already exist" });
-    } else if (password != cpassword) {
+    } else if (password !== cpassword) {
       return res.status(400).json({ error: "password not matching" });
     } else {
       const user = new User({ name, email, password, cpassword });
@@ -81,18 +81,84 @@ router.get("/home", authenticate, (req, res) => {
 router.post("/Introduction-to-Research-Safety", async (req, res) => {
   const { correct } = req.body;
   const token = req.cookies.jwtoken;
-  const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
-  const rootUser = await User.findOne({
-    _id: verifyToken._id,
-  });
 
-  if (rootUser) {
-    rootUser.course1Marks = correct;
+  if (token) {
+    const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+    const rootUser = await User.findOne({
+      _id: verifyToken._id,
+    });
+
+    if (rootUser) {
+      rootUser.course1Marks = correct;
+    }
+
+    await rootUser.save();
   }
-
-  await rootUser.save();
 });
 router.get("/Introduction-to-Research-Safety", authenticate, (req, res) => {
+  res.send(req.rootUser);
+});
+
+router.post("/Chemical-Safety", async (req, res) => {
+  const { correct } = req.body;
+  const token = req.cookies.jwtoken;
+
+  if (token) {
+    const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+    const rootUser = await User.findOne({
+      _id: verifyToken._id,
+    });
+
+    if (rootUser) {
+      rootUser.course2Marks = correct;
+    }
+
+    await rootUser.save();
+  }
+});
+router.get("/Chemical-Safety", authenticate, (req, res) => {
+  res.send(req.rootUser);
+});
+
+router.post("/Controlled-Substances", async (req, res) => {
+  const { correct } = req.body;
+  const token = req.cookies.jwtoken;
+
+  if (token) {
+    const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+    const rootUser = await User.findOne({
+      _id: verifyToken._id,
+    });
+
+    if (rootUser) {
+      rootUser.course3Marks = correct;
+    }
+
+    await rootUser.save();
+  }
+});
+router.get("/Controlled-Substances", authenticate, (req, res) => {
+  res.send(req.rootUser);
+});
+
+router.post("/Formaldehyde", async (req, res) => {
+  const { correct } = req.body;
+  const token = req.cookies.jwtoken;
+
+  if (token) {
+    const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+    const rootUser = await User.findOne({
+      _id: verifyToken._id,
+    });
+
+    if (rootUser) {
+      rootUser.course4Marks = correct;
+    }
+
+    await rootUser.save();
+  }
+});
+router.get("/Formaldehyde", authenticate, (req, res) => {
   res.send(req.rootUser);
 });
 

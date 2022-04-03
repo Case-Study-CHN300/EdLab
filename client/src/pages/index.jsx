@@ -10,7 +10,6 @@ const Main = () => {
 		  <HeroSection />
 		  <InfoSection {...homeObjOne} />
 		  <InfoSection {...homeObjTwo} />
-		  <CoursesSection />
 		  <Footer/>
 		</>
 	);

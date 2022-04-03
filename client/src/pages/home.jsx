@@ -51,16 +51,16 @@ const Home = () => {
     navigate("/Introduction-to-Research-Safety");
   }
   const changeRoute2 = () => {
-    navigate("/");
+    navigate("/Chemical-Safety");
   }  
   const changeRoute3 = () => {
-    navigate("/");
+    navigate("/Controlled-Substances");
   }  
   const changeRoute4 = () => {
-    navigate("/");
+    navigate("/Formaldehyde");
   }
   const changeRoute5 = () => {
-    navigate("/");
+    navigate("/Safe-Use-Of-Anesthetic-Gases");
   }
   return (
     <>
@@ -70,35 +70,22 @@ const Home = () => {
         <CoursesCard onClick={changeRoute1}>
           <CoursesIcon src={Icon1} />
           <CoursesH2 >Introduction to Research Safety</CoursesH2>
-          <CoursesP>
-           	Anyone performing research in a U of M laboratory
-          </CoursesP>
         </CoursesCard>
         <CoursesCard onClick={changeRoute2}>
           <CoursesIcon src={Icon2} />
           <CoursesH2>Chemical Safety</CoursesH2>
-          <CoursesP>
-            Anyone performing research in a U of M laboratory
-          </CoursesP>
         </CoursesCard>
         <CoursesCard onClick={changeRoute3}>
           <CoursesIcon src={Icon1} />
           <CoursesH2>Controlled Substances</CoursesH2>
-          <CoursesP>
-          Anyone performing research in a U of M laboratory          </CoursesP>
         </CoursesCard>
         <CoursesCard onClick={changeRoute4}>
           <CoursesIcon src={Icon2} />
           <CoursesH2>Formaldehyde</CoursesH2>
-          <CoursesP>
-          Anyone performing research in a U of M laboratory          </CoursesP>
         </CoursesCard>
         <CoursesCard onClick={changeRoute5}>
           <CoursesIcon src={Icon3} />
           <CoursesH2>Safe Use of Anesthetic Gases</CoursesH2>
-          <CoursesP>
-          Anyone performing research in a U of M laboratory
-          </CoursesP>
         </CoursesCard>
       </CoursesWrapper>
     </CoursesContainer>

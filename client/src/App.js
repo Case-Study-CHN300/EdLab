@@ -4,6 +4,10 @@ import Signup from "./pages/signup";
 import Signin from "./pages/signin";
 import Logout from "./pages/logout";
 import ResearchSafety from "./pages/research-safety";
+import ChemicalSafety from "./pages/chemical-safety";
+import ControlledSubstances from "./pages/controlled-substances";
+import Formaldehyde from "./pages/formaldehyde";
+import AnestheticGases from "./pages/anesthetic-gases";
 import Home from "./pages/home";
 import { createContext, useReducer, React, useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
@@ -23,6 +27,18 @@ const Routing = () => {
         path="/Introduction-to-Research-Safety"
         exact
         element={<ResearchSafety />}
+      />
+      <Route path="/Chemical-Safety" exact element={<ChemicalSafety />} />
+      <Route
+        path="/Controlled-Substances"
+        exact
+        element={<ControlledSubstances />}
+      />
+      <Route path="/Formaldehyde" exact element={<Formaldehyde />} />
+      <Route
+        path="/Safe-Use-Of-Anesthetic-Gases"
+        exact
+        element={<AnestheticGases />}
       />
     </Routes>
   );
