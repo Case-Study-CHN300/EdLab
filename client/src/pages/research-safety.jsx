@@ -5,13 +5,9 @@ import Question from '../components/Quiz/Question';
 import End from '../components/Quiz/Quiz1/End';
 import ScoreCard from '../components/Quiz/ScoreCard';
 import Modal from '../components/Quiz/Modal';
-
 import quizData from '../components/Quiz/data/quiz1.json';
-
-import Download from '../components/download/Download';
+import Download from '../components/DownloadSection/download1';
 import "react-awesome-slider/dist/styles.css";
-
-
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
 import Footer from '../components/Footer';
@@ -96,6 +92,9 @@ const ResearchSafety = () => {
   return (
     <>
     <div className="Quiz_App">
+      <div>
+        <Download/>
+      </div>
       <RenderQuiz/>
           {step === 2 && <Question
             questionNumber={activeQuestion+1} 

@@ -6,6 +6,7 @@ import End from '../components/Quiz/Quiz3/End';
 import ScoreCard from '../components/Quiz/ScoreCard';
 import Modal from '../components/Quiz/Modal';
 import quizData from '../components/Quiz/data/quiz3.json';
+import Download from '../components/DownloadSection/download3';
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
 import Footer from '../components/Footer';
@@ -90,6 +91,9 @@ const ControlledSubstances = () => {
   return (
     <>
     <div className="Quiz_App">
+      <div>
+        <Download/>
+      </div>
       <RenderQuiz/>
           {step === 2 && <Question 
             questionNumber={activeQuestion+1} 

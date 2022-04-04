@@ -5,7 +5,6 @@ import Question from '../components/Quiz/Question';
 import End from '../components/Quiz/Quiz5/End';
 import ScoreCard from '../components/Quiz/ScoreCard';
 import Modal from '../components/Quiz/Modal';
-// import DownloadContainer from '../components/Quiz/DownloadContainer';
 import quizData from '../components/Quiz/data/quiz5.json';
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
