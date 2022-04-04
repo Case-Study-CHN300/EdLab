@@ -14,6 +14,7 @@ import {
   NavBtn2,
   NavBtnLink1,
   NavBtnLink2,
+  NavLinkR
 } from "./NavbarElements";
 import { UserContext } from '../../App';
 
@@ -39,9 +40,9 @@ const Navbar = ({ toggle }) => {
     if(state){
       return(
         <>
-          <NavBtn1>
+          <NavBtn2>
             <NavBtnLink1 scrollnav={scrollnav} to="/logout">Log Out</NavBtnLink1>
-          </NavBtn1>
+          </NavBtn2>
         </>
       )
     }
@@ -54,6 +55,7 @@ const Navbar = ({ toggle }) => {
           <NavBtn2>
             <NavBtnLink2 scrollnav={scrollnav} to="/signin">Sign In</NavBtnLink2>
           </NavBtn2>
+
         </>
       )
     }
@@ -63,7 +65,7 @@ const Navbar = ({ toggle }) => {
       <Nav scrollnav={scrollnav}>
             <NavbarContainer>
               <NavLogo scrollnav={scrollnav} to="/" onClick={toggleHome}>
-                Leetcode
+                Chemiopedia
               </NavLogo >
               <MobileIcon scrollnav={scrollnav} onClick={toggle}>
                 <FaBars />
@@ -94,8 +96,8 @@ const Navbar = ({ toggle }) => {
                   </NavLinks>
                 </NavItem>
                 <NavItem>
-                  <NavLinks scrollnav={scrollnav}
-                    to="courses"
+                  <NavLinkR scrollnav={scrollnav}
+                    to="/home"
                     smooth={true}
                     duration={500}
                     spy={true}
@@ -103,8 +105,9 @@ const Navbar = ({ toggle }) => {
                     offset={-80}
                   >
                     Courses
-                  </NavLinks>
+                  </NavLinkR>
                 </NavItem>
+                
               </NavMenu>
               <NavBtnWrap>
                 <RenderMenu/>

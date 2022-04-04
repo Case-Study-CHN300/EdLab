@@ -1,35 +1,74 @@
 /* html,
-body,
-#root {
+body, */
+/* #root {
   height: 100%;
 } */
 
 .Quiz_App {
   display: flex;
+  margin-top: 8rem;
+  margin-bottom: 25rem;
   align-items: center;
   justify-content: center;
   min-height: 100%;
 }
 
+.quiz-p{
+  text-align: left;
+  font-size: 17px;
+  color: #007791;
+}
+.quiz-span1{
+  text-align: left;
+  font-size: 25px;
+  color: #007791;
+  font-weight: bold;
+}
+.quiz-span2{
+  text-align: left;
+  font-size: 19px;
+  color: #007791;
+  padding: 0.5rem;
+}
+.quiz-question{
+  background-color: #EBFFFC;
+  padding: 10px;
+  margin: 0;
+  text-align: left;
+}
 .Quiz_App .card {
   height: 100%;
   max-width: 400px;
   width: 100%;
   text-align: center;
+  border-radius: 10px;
+  background-color: white;
+  padding: 0;
 }
+/* #007791 */
 
 label.radio {
   display: block;
   text-align: left;
   padding: 15px;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  /* border: 2px solid grey; */
 }
 
 label.radio+.radio {
   margin-left: 0;
+  background-color: white;
 }
 
 label.radio input {
   margin-right: 10px;
 } 
+
+.scorecard-img{
+  height: 15rem;
+}
+.buttonContainer{
+  padding: 1rem 2rem;
+}

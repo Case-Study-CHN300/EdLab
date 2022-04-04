@@ -45,7 +45,7 @@ const Signin = () => {
       }
       else{
         dispatch({type: "USER", payload: true});
-        window.alert("Login success");
+        window.alert("Login successful");
         navigate("/home");
       }
   }

@@ -10,7 +10,7 @@ import Formaldehyde from "./pages/formaldehyde";
 import AnestheticGases from "./pages/anesthetic-gases";
 import Home from "./pages/home";
 import { createContext, useReducer, React, useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/index";
 import Sidebar from "./components/Sidebar";
 import { reducer, initialState } from "../src/reducer/useReducer";
 

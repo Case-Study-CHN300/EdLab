@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import iitr from "../../images/IITR175.png";
 
 export const FooterContainer = styled.div`
   background-color: black;
@@ -55,14 +56,14 @@ export const FooterLinkTitle = styled.h1`
 `;
 
 export const FooterLink = styled(Link)`
-  color: #fff;
+  color: #4169e1;
   text-decoration: none;
   margin-bottom: 0.5rem;
   font-size: 14px;
 
   &:hover {
-    color: red;
-    transition: 0ms.3s ease-out;
+    color: #12f84d;
+    transition: 0.3s ease-out;
   }
 `;
 
@@ -99,6 +100,10 @@ export const WebsiteRights = styled.small`
   color: #fff;
   margin-bottom: 16px;
   font-size: 18px;
+`;
+
+export const Img = styled.img`
+  height: 4rem;
 `;
 
 export const SocialIcons = styled.div`

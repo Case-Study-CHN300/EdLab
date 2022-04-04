@@ -82,8 +82,8 @@ router.post("/Introduction-to-Research-Safety", async (req, res) => {
   const { correct } = req.body;
   const token = req.cookies.jwtoken;
 
-  if (token) {
-    const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+  const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+  if (verifyToken) {
     const rootUser = await User.findOne({
       _id: verifyToken._id,
     });
@@ -103,8 +103,8 @@ router.post("/Chemical-Safety", async (req, res) => {
   const { correct } = req.body;
   const token = req.cookies.jwtoken;
 
-  if (token) {
-    const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+  const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+  if (verifyToken) {
     const rootUser = await User.findOne({
       _id: verifyToken._id,
     });
@@ -124,8 +124,8 @@ router.post("/Controlled-Substances", async (req, res) => {
   const { correct } = req.body;
   const token = req.cookies.jwtoken;
 
-  if (token) {
-    const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+  const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+  if (verifyToken) {
     const rootUser = await User.findOne({
       _id: verifyToken._id,
     });
@@ -145,8 +145,8 @@ router.post("/Formaldehyde", async (req, res) => {
   const { correct } = req.body;
   const token = req.cookies.jwtoken;
 
-  if (token) {
-    const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+  const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+  if (verifyToken) {
     const rootUser = await User.findOne({
       _id: verifyToken._id,
     });
@@ -159,6 +159,27 @@ router.post("/Formaldehyde", async (req, res) => {
   }
 });
 router.get("/Formaldehyde", authenticate, (req, res) => {
+  res.send(req.rootUser);
+});
+
+router.post("/Safe-Use-Of-Anesthetic-Gases", async (req, res) => {
+  const { correct } = req.body;
+  const token = req.cookies.jwtoken;
+
+  const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+  if (verifyToken) {
+    const rootUser = await User.findOne({
+      _id: verifyToken._id,
+    });
+
+    if (rootUser) {
+      rootUser.course5Marks = correct;
+    }
+
+    await rootUser.save();
+  }
+});
+router.get("/Safe-Use-Of-Anesthetic-Gases", authenticate, (req, res) => {
   res.send(req.rootUser);
 });
 

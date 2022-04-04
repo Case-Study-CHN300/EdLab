@@ -5,9 +5,11 @@ import Question from '../components/Quiz/Question';
 import End from '../components/Quiz/Quiz5/End';
 import ScoreCard from '../components/Quiz/ScoreCard';
 import Modal from '../components/Quiz/Modal';
+// import DownloadContainer from '../components/Quiz/DownloadContainer';
 import quizData from '../components/Quiz/data/quiz5.json';
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
+import Footer from '../components/Footer';
 
 let interval;
 const AnestheticGases = () => {
@@ -69,7 +71,6 @@ const AnestheticGases = () => {
       navigate("/home")
     }
     const marks = userData.course5Marks;
-
     const RenderQuiz = () => {
       if (marks >= 0) {
         return (
@@ -89,8 +90,11 @@ const AnestheticGases = () => {
   return (
     <>
     <div className="Quiz_App">
+    {step === 1 && <Start onQuizStart={quizStartHandler}/>}
       <RenderQuiz/>
           {step === 2 && <Question 
+            questionNumber={activeQuestion+1} 
+            questionsLength={quizData.data.length}
             data={quizData.data[activeQuestion]}
             onAnswerUpdate={setAnswers}
             numberOfQuestions={quizData.data.length}
@@ -111,7 +115,8 @@ const AnestheticGases = () => {
             results={answers}
             data={quizData.data}
           />}
-    </div>   
+    </div>  
+    <Footer/> 
     </>
   )
 }

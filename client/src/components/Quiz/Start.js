@@ -1,6 +1,6 @@
 import React from "react";
 
-const Start = ({ onQuizStart }) => {
+const Start = ({ onQuizStart }, { onInstructionsCheck }) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -13,7 +13,9 @@ const Start = ({ onQuizStart }) => {
           >
             Start
           </button>
-          {/* <RenderStart /> */}
+          {/* <button className="button is-link mr-2" onClick={onInstructionsCheck} >
+            Instructions
+          </button> */}
         </div>
       </div>
     </div>

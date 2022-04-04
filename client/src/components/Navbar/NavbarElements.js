@@ -13,7 +13,6 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-
   @media screen and(max-width:960px) {
     transition: 0.8s all ease;
   }
@@ -38,6 +37,10 @@ export const NavLogo = styled(LinkR)`
   font-weight: bold;
   text-decoration: none;
   font-size: 1.5rem;
+  margin-right: 5%;
+  @media screen and (max-width: 1080px) {
+    margin-right: 2rem;
+  }
 `;
 
 export const MobileIcon = styled.div`
@@ -60,8 +63,16 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -22px;
-
+  margin-right: 17%;
+  margin-left: 17%;
+  @media screen and (max-width: 1080px) {
+    margin-right: 14%;
+    margin-left: 14%;
+  }
+  @media screen and (max-width: 990px) {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -76,7 +87,20 @@ export const NavLinks = styled(LinkS)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+  height: 100%;
+  cursor: pointer;
+
+  /* &.active {
+    border-bottom: 3px solid #4169e1;
+  } */
+`;
+export const NavLinkR = styled(LinkR)`
+  color: ${({ scrollnav }) => (scrollnav ? "white" : "black")};
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1.5rem;
   height: 100%;
   cursor: pointer;
 
@@ -88,8 +112,7 @@ export const NavLinks = styled(LinkS)`
 export const NavBtn1 = styled.nav`
   display: flex;
   align-items: center;
-  margin: 0.5rem;
-
+  margin-right: 0.5rem;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -108,7 +131,7 @@ export const NavBtnLink1 = styled(LinkR)`
   border-radius: 5px;
   background: white;
   white-space: nowrap;
-  padding: 10px 25px;
+  padding: 10px 18px;
   color: black;
   font-size: 16px;
   outline: none;
@@ -131,7 +154,7 @@ export const NavBtnLink2 = styled(LinkR)`
   border-radius: 5px;
   background: #4169e1;
   white-space: nowrap;
-  padding: 10px 25px;
+  padding: 10px 18px;
   color: #f9f9f9;
   font-size: 16px;
   outline: none;

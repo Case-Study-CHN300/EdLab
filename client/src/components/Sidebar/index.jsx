@@ -9,6 +9,7 @@ import {
   SideBtnWrap,
   SidebarRoute1,
   SidebarRoute2,
+  SidebarLinkR
 } from "./SidebarElements";
 import { UserContext } from '../../App';
 const Sidebar = ({ isOpen, toggle }) => {
@@ -49,9 +50,9 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="discover" onClick={toggle}>
             Discover
           </SidebarLink>
-          <SidebarLink to="courses" onClick={toggle}>
+          <SidebarLinkR to="/home" onClick={toggle}>
             Courses
-          </SidebarLink>
+          </SidebarLinkR>
         </SidebarMenu>
         <RenderMenu/>
       </SidebarWrapper>

@@ -49,7 +49,7 @@ const Signup = () => {
 
     const data = await res.json();
     if(res.status === 400 || !data){
-        window.alert("Invalid reg");
+        window.alert("Invalid registration");
     }
     else{ // error in this part
         window.alert("Valid registration, please sign-in to proceed");

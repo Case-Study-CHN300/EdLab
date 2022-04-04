@@ -8,7 +8,7 @@ import Modal from '../components/Quiz/Modal';
 import quizData from '../components/Quiz/data/quiz4.json';
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
-
+import Footer from '../components/Footer';
 let interval;
 const Formaldehyde = () => {
     const navigate = useNavigate();
@@ -88,9 +88,12 @@ const Formaldehyde = () => {
     };
   return (
     <>
+    {/* <div className='sec'> */}
     <div className="Quiz_App">
-      <RenderQuiz/>
+          <RenderQuiz/>
           {step === 2 && <Question 
+            questionNumber={activeQuestion+1} 
+            questionsLength={quizData.data.length}
             data={quizData.data[activeQuestion]}
             onAnswerUpdate={setAnswers}
             numberOfQuestions={quizData.data.length}
@@ -111,7 +114,9 @@ const Formaldehyde = () => {
             results={answers}
             data={quizData.data}
           />}
-    </div>   
+    </div>
+    {/* </div> */}
+       <Footer/>
     </>
   )
 }

@@ -54,6 +54,23 @@ export const SidebarLink = styled(LinkS)`
   }
 `;
 
+export const SidebarLinkR = styled(LinkR)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s ease-in-out;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    color: #4169e1;
+    transition: 0.2s ease-in-out;
+  }
+`;
+
 export const SidebarMenu = styled(LinkS)`
   display: grid;
   grid-template-columns: 1fr;

@@ -31,6 +31,7 @@ const InfoSection = ({
   primary,
   dark,
   dark2,
+  second,
 }) => {
   return (
     <>
@@ -38,13 +39,13 @@ const InfoSection = ({
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <Column1>
-              <TextWrapper>
+              <TextWrapper second={second}>
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headLine}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
-                    to="home"
+                    to="/home"
                     smooth={true}
                     duration={500}
                     spy={true}
@@ -61,7 +62,7 @@ const InfoSection = ({
             </Column1>
             <Column2>
               <ImgWrap>
-                <Img src={img} alt={alt} />
+                <Img src={img} alt={alt} second={second} />
               </ImgWrap>
             </Column2>
           </InfoRow>

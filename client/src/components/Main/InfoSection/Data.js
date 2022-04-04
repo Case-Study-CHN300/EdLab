@@ -1,5 +1,5 @@
-import car from "../../../images/flask-1.svg";
-import science from "../../../images/people-1.svg";
+import flask from "../../../images/flask-1.svg";
+import exam from "../../../images/exam-1.svg";
 
 export const homeObjOne = {
   id: "about",
@@ -12,11 +12,12 @@ export const homeObjOne = {
     "kjnjn mnb nmjhgbvnmdvb mvjhb vjsh vmnsjhvbmsvjhbs hjvs hvbhjs vsvs  vsjh bvhmṇ vbmn svs msvjhbs vsb vmnsvjmn",
   buttonLabel: "Get Started",
   imgStart: false,
-  img: car,
-  alt: "Car",
+  img: flask,
+  alt: "person with flask",
   dark: true,
   primary: true,
   darkText: false,
+  second: false,
 };
 
 export const homeObjTwo = {
@@ -30,11 +31,12 @@ export const homeObjTwo = {
     "kjnjn mnb nmjhgbvnmdvb mvjhb vjsh vmnsjhvbmsvjhbs hjvs hvbhjs vsvs  vsjh bvhmṇ vbmn svs msvjhbs vsb vmnsvjmn",
   buttonLabel: "Get Started",
   imgStart: true,
-  img: science,
+  img: exam,
   alt: "Quiz",
   dark: false,
   primary: false,
   darkText: true,
+  second: true,
 };
 
 export const homeObjThree = {

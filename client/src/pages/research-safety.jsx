@@ -14,6 +14,7 @@ import "react-awesome-slider/dist/styles.css";
 
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
+import Footer from '../components/Footer';
 
 let interval;
 const ResearchSafety = () => {
@@ -94,38 +95,33 @@ const ResearchSafety = () => {
     };
   return (
     <>
-
-    <div className="App">
-    <div>
-        <Download />
-      </div>
-      {/* <h1>{userData.course1Marks}</h1> */}
-      {step === 1 && <Start onQuizStart={quizStartHandler}/>}
-      {step === 2 && <Question 
-        data={quizData.data[activeQuestion]}
-        onAnswerUpdate={setAnswers}
-        numberOfQuestions={quizData.data.length}
-        activeQuestion={activeQuestion}
-        onSetActiveQuestion={setActiveQuestion}
-        onSetStep={setStep}
-      />}
-      {step === 3 && <End 
-        results={answers}
-        data={quizData.data}
-        onReset={resetClickHandler}
-        onAnswersCheck={() => setShowModal(true)}
-        time={time}
-      />}
-
-      {showModal && <Modal 
-        onClose={() => setShowModal(false)}
-        results={answers}
-        data={quizData.data}
-      />}
-     
-    </div>
-   
-
+    <div className="Quiz_App">
+      <RenderQuiz/>
+          {step === 2 && <Question
+            questionNumber={activeQuestion+1} 
+            questionsLength={quizData.data.length} 
+            data={quizData.data[activeQuestion]}
+            onAnswerUpdate={setAnswers}
+            numberOfQuestions={quizData.data.length}
+            activeQuestion={activeQuestion}
+            onSetActiveQuestion={setActiveQuestion}
+            onSetStep={setStep}
+          />}
+          {step === 3 && <End 
+            results={answers}
+            data={quizData.data}
+            onReset={resetClickHandler}
+            onAnswersCheck={() => setShowModal(true)}
+            time={time}
+          />}
+    
+          {showModal && <Modal 
+            onClose={() => setShowModal(false)}
+            results={answers}
+            data={quizData.data}
+          />}
+    </div> 
+    <Footer/>  
     </>
   )
 }

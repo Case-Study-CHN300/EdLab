@@ -1,10 +1,12 @@
 import React from "react";
+import completed from "../../images/complete.svg";
 const ScoreCard = ({ correctAnswers, data }) => {
   return (
     <div className="card">
       <div className="card-content">
         <div className="content">
-          <h3>Your results</h3>
+          <img className="scorecard-img" src={completed} alt="sss"></img>
+          <h3>Your results:</h3>
           <p>
             {correctAnswers} of {data.length}
           </p>

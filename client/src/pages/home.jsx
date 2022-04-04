@@ -1,18 +1,19 @@
 import React, {useEffect, useState} from 'react'
 import {useNavigate} from 'react-router-dom';
-import Icon1 from "../images/planet-3.svg";
-import Icon2 from "../images/planet-4.svg";
-import Icon3 from "../images/planet-1.svg";
+import formaldehyde from "../images/formaldehyde.svg";
+import anestheicGases from "../images/anesthetic-gases.svg";
+import chemicalSafety from "../images/chemical-safety.svg";
+import researchSafety from "../images/research-safety.svg";
+import controlledSubstances from "../images/controlled-substances.svg";
+import Footer from '../components/Footer';
 
 import {
   CoursesContainer,
-  CoursesH1,
   CoursesWrapper,
   CoursesCard,
   CoursesIcon,
   CoursesH2,
-  CoursesP,
-} from "../components/Main/CoursesSection/CourseElements";
+} from "../components/CoursesSection/CourseElements";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -68,27 +69,28 @@ const Home = () => {
       {/* {userData.name} */}
       <CoursesWrapper>
         <CoursesCard onClick={changeRoute1}>
-          <CoursesIcon src={Icon1} />
+          <CoursesIcon src={researchSafety} />
           <CoursesH2 >Introduction to Research Safety</CoursesH2>
         </CoursesCard>
         <CoursesCard onClick={changeRoute2}>
-          <CoursesIcon src={Icon2} />
+          <CoursesIcon src={chemicalSafety} />
           <CoursesH2>Chemical Safety</CoursesH2>
         </CoursesCard>
         <CoursesCard onClick={changeRoute3}>
-          <CoursesIcon src={Icon1} />
+          <CoursesIcon src={controlledSubstances} />
           <CoursesH2>Controlled Substances</CoursesH2>
         </CoursesCard>
         <CoursesCard onClick={changeRoute4}>
-          <CoursesIcon src={Icon2} />
+          <CoursesIcon src={formaldehyde} />
           <CoursesH2>Formaldehyde</CoursesH2>
         </CoursesCard>
         <CoursesCard onClick={changeRoute5}>
-          <CoursesIcon src={Icon3} />
+          <CoursesIcon src={anestheicGases} />
           <CoursesH2>Safe Use of Anesthetic Gases</CoursesH2>
         </CoursesCard>
       </CoursesWrapper>
     </CoursesContainer>
+    <Footer/>
     </>
   )
 }

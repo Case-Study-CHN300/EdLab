@@ -42,14 +42,13 @@ export const Column1 = styled.div`
 
 export const Column2 = styled.div`
   margin-bottom: 15px;
-  padding: 0 15px;
+  padding: 0 50px;
   grid-area: col2;
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 540px;
-  padding-top: 0;
-  padding-bottom: 60px;
+  max-width: 600px;
+  padding: ${({ second }) => (second ? "2rem" : "0")};
 `;
 
 export const TopLine = styled.p`
@@ -95,5 +94,5 @@ export const ImgWrap = styled.div`
 export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
-  padding-right: 0;
+  padding: ${({ second }) => (second ? "2rem" : "0")};
 `;
