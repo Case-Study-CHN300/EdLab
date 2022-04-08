@@ -4,7 +4,8 @@ import '../components/Form/Form.css';
 import validate from '../components/Form/validateInfo';
 import styled from "styled-components";
 import { motion } from "framer-motion";
-
+import Navbar from "../components/Navbar/index2";
+import Sidebar from "../components/Sidebar/index2";
 const Signup = () => {
   const Button = styled(motion.button)`
     padding: 1rem 2rem;
@@ -20,7 +21,7 @@ const Signup = () => {
    const navigate = useNavigate();
    const [errors, setErrors] = useState({});
    const [user , setUser] = useState({
-       name:"", email: "", password: "", cpassword:""
+       name:"", email: "", supervisor:"", password: "", cpassword:""
    });
 
    let name , value;
@@ -34,7 +35,7 @@ const Signup = () => {
 
    const PostData = async (e) =>{
     e.preventDefault();
-    const {name, email, password, cpassword} = user;
+    const {name, email, supervisor, password, cpassword} = user;
     setErrors(validate(user));
     console.log("errors " + errors);
     const res = await fetch("/register", {
@@ -43,7 +44,7 @@ const Signup = () => {
             "Content-Type" : "application/json"
         },
         body: JSON.stringify({
-            name, email, password, cpassword
+            name, email, supervisor, password, cpassword
         })
     })
 
@@ -56,8 +57,15 @@ const Signup = () => {
         navigate("/signin");
     }
    }
+   const [isOpen, setIsOpen] = useState(false);
+
+   const toggle = () => {
+     setIsOpen(!isOpen);
+   };
   return (
     <>
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} />
         <div class="background">
           <div class="shape"></div>
           <div class="shape"></div>
@@ -74,7 +82,16 @@ const Signup = () => {
                   value={user.name} onChange={handleInputs}
                 />
                 {errors.name && <p className='form-p'>{errors.name}</p>}
-              <label for="email">Email</label>
+              <label for="supervisor">Safety Supervisor Name</label>
+                <input
+                  className='form-input'
+                  type='text'
+                  name='supervisor'
+                  placeholder='Enter Safety supervisor full name'
+                  value={user.supervisor} onChange={handleInputs}
+                />
+                {errors.name && <p className='form-p'>{errors.name}</p>}
+              <label for="email">IITR-Email</label>
                 <input
                   className='form-input'
                   type='email'

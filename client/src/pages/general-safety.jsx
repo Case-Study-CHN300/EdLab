@@ -11,9 +11,12 @@ import "react-awesome-slider/dist/styles.css";
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
 import Footer from '../components/Footer';
+import Instructions from '../components/Quiz/Instructions';
+import Navbar from "../components/Navbar/index2";
+import Sidebar from "../components/Sidebar/index2";
 
 let interval;
-const ResearchSafety = () => {
+const GeneralSafety = () => {
     const navigate = useNavigate();
     const [userData, setUserData] = useState({});
     const callHomePage = async () => {
@@ -49,6 +52,7 @@ const ResearchSafety = () => {
     const [activeQuestion, setActiveQuestion] = useState(0);
     const [answers, setAnswers] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const [showInstructions, setShowInstructions] = useState(false);
     const [time, setTime] = useState(0);
   
     useEffect(() => {
@@ -58,10 +62,8 @@ const ResearchSafety = () => {
     }, [step]);
   
     const quizStartHandler = () => {
+      setShowInstructions(true);
       setStep(2);
-      interval = setInterval(() => {
-        setTime(prevTime => prevTime + 1);
-      }, 1000);
     }
   
     const resetClickHandler = () => {
@@ -72,31 +74,40 @@ const ResearchSafety = () => {
       navigate("/home")
     }
     const marks = userData.course1Marks;
-
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
     const RenderQuiz = () => {
       if (marks >= 0) {
         return (
+          <>
+          <Download/>
           <ScoreCard       
           correctAnswers={marks}
           data={quizData.data}
           />
+          </>
         )
       } else {
         return (
           <>
+          {step === 1 && <Download/>}
           {step === 1 && <Start onQuizStart={quizStartHandler}/>}
           </>
         )
       }
     };
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+      setIsOpen(!isOpen);
+    };
   return (
-    <>
-    <div className="Quiz_App">
-      <div>
-        <Download/>
-      </div>
-      <RenderQuiz/>
-          {step === 2 && <Question
+    <> 
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} />
+    <RenderQuiz/>
+    {step === 2 && <Question
             questionNumber={activeQuestion+1} 
             questionsLength={quizData.data.length} 
             data={quizData.data[activeQuestion]}
@@ -105,24 +116,33 @@ const ResearchSafety = () => {
             activeQuestion={activeQuestion}
             onSetActiveQuestion={setActiveQuestion}
             onSetStep={setStep}
-          />}
-          {step === 3 && <End 
+    />}
+    {step === 3 && <End 
             results={answers}
             data={quizData.data}
             onReset={resetClickHandler}
             onAnswersCheck={() => setShowModal(true)}
             time={time}
-          />}
-    
+    />}
+    <div className="Quiz_App">
           {showModal && <Modal 
             onClose={() => setShowModal(false)}
             results={answers}
             data={quizData.data}
           />}
+          {showInstructions && <Instructions 
+            onClose={() => {
+              setShowInstructions(false)
+              interval = setInterval(() => {
+                setTime(prevTime => prevTime + 1);
+              }, 1000);
+            }}
+          />}
     </div> 
+    
     <Footer/>  
     </>
   )
 }
 
-export default ResearchSafety
+export default GeneralSafety

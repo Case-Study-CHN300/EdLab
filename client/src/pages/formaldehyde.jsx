@@ -9,6 +9,8 @@ import quizData from '../components/Quiz/data/quiz4.json';
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
 import Footer from '../components/Footer';
+import Navbar from "../components/Navbar/index2";
+import Sidebar from "../components/Sidebar/index2";
 let interval;
 const Formaldehyde = () => {
     const navigate = useNavigate();
@@ -86,9 +88,15 @@ const Formaldehyde = () => {
         )
       }
     };
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+      setIsOpen(!isOpen);
+    };
   return (
     <>
-    {/* <div className='sec'> */}
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} />
     <div className="Quiz_App">
           <RenderQuiz/>
           {step === 2 && <Question 

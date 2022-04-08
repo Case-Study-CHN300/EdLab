@@ -3,9 +3,8 @@ import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
-  background: ${({ scrollnav }) => (scrollnav ? "black" : "transparent")};
+  background: ${({ scrollnav }) => (scrollnav ? "black" : "#f9f9f9")};
   height: 80px;
-  /* margin-top: -80px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,12 +33,14 @@ export const NavLogo = styled(LinkR)`
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-weight: bold;
+  font-weight: bolder;
   text-decoration: none;
   font-size: 1.5rem;
-  margin-right: 5%;
-  @media screen and (max-width: 1080px) {
-    margin-right: 2rem;
+  @media screen and (max-width: 1200px) {
+    margin-right: 2%;
+  }
+  @media screen and (max-width: 800px) {
+    margin-right: 0;
   }
 `;
 
@@ -63,15 +64,13 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: 17%;
+  margin-right: -2%;
   margin-left: 17%;
   @media screen and (max-width: 1080px) {
-    margin-right: 14%;
     margin-left: 14%;
   }
   @media screen and (max-width: 990px) {
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-left: 4%;
   }
   @media screen and (max-width: 768px) {
     display: none;
@@ -91,9 +90,9 @@ export const NavLinks = styled(LinkS)`
   height: 100%;
   cursor: pointer;
 
-  /* &.active {
-    border-bottom: 3px solid #4169e1;
-  } */
+  &:hover {
+    color: #12f84d;
+  }
 `;
 export const NavLinkR = styled(LinkR)`
   color: ${({ scrollnav }) => (scrollnav ? "white" : "black")};
@@ -104,8 +103,8 @@ export const NavLinkR = styled(LinkR)`
   height: 100%;
   cursor: pointer;
 
-  &.active {
-    border-bottom: 3px solid #4169e1;
+  &:hover {
+    color: #12f84d;
   }
 `;
 

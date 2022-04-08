@@ -49,7 +49,7 @@ const Footer = () => {
             </SocialIcons> */}
             <FooterLinkItems>
               <FooterLinkTitle>
-                Made with by &#128151; Students @IITR
+                Made with &#128151; by Students @IITR
               </FooterLinkTitle>
               <FooterLink to="/team">Meet the team</FooterLink>
             </FooterLinkItems>

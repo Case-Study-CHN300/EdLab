@@ -4,17 +4,20 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #f9f9f9;
+.form-container{
+    min-height: 100%;
+    background-color: red;
+    z-index: 1;
 }
 .background{
     justify-content: center;
-    width: 430px;
+    width: 450px;
     height: 520px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
     top: 50%;
+    z-index: 1;
 }
 .background .shape{
     height: 200px;
@@ -36,11 +39,11 @@ body{
         #fa706c,
         #f09819
     );
-    right: -220px;
-    bottom: -270px;
+    right: -20px;
+    bottom: -380px;
 }
 form{
-    width: 90%;
+    width: 95%;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
     transform: translate(-50%,-50%);
@@ -48,15 +51,16 @@ form{
     left: 50%;
     margin-top: 4rem;
     border-radius: 2px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(1px);
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
+    margin-bottom: 10rem;
 }
 form *{
     font-family: sans-serif;
     color: #f9f9f9;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
     outline: none;
     border: none;
 }

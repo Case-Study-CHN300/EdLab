@@ -24,7 +24,7 @@ app.get("/signin", (req, res) => {
 });
 
 app.get("/download1", (req, res) => {
-  res.download("./pdfs/Introduction-to-Research-Safety.pdf");
+  res.download("./pdfs/General-Safety.pdf");
 });
 app.get("/download2", (req, res) => {
   res.download("./pdfs/Introduction-to-Research-Safety.pdf");

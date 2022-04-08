@@ -1,5 +1,5 @@
 import flask from "../../../images/flask-1.svg";
-import exam from "../../../images/exam-1.svg";
+import map from "../../../images/map.svg";
 
 export const homeObjOne = {
   id: "about",
@@ -31,7 +31,7 @@ export const homeObjTwo = {
     "kjnjn mnb nmjhgbvnmdvb mvjhb vjsh vmnsjhvbmsvjhbs hjvs hvbhjs vsvs  vsjh bvhmṇ vbmn svs msvjhbs vsb vmnsvjmn",
   buttonLabel: "Get Started",
   imgStart: true,
-  img: exam,
+  img: map,
   alt: "Quiz",
   dark: false,
   primary: false,

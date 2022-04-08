@@ -8,12 +8,12 @@ import {
   MobileIcon,
   NavMenu,
   NavItem,
-  NavLinks,
   NavBtnWrap,
   NavBtn1,
   NavBtn2,
   NavBtnLink1,
   NavBtnLink2,
+  NavLinkR
 } from "./NavbarElements";
 import { UserContext } from '../../App';
 
@@ -68,6 +68,21 @@ const Navbar = ({ toggle }) => {
               <MobileIcon scrollnav={scrollnav} onClick={toggle}>
                 <FaBars />
               </MobileIcon>
+              {/* <NavMenu>
+                <NavItem>
+                  <NavLinkR scrollnav={scrollnav}
+                    to="/home"
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                  >
+                    Modules
+                  </NavLinkR>
+                </NavItem>
+                
+              </NavMenu> */}
               <NavBtnWrap>
                 <RenderMenu/>
               </NavBtnWrap>

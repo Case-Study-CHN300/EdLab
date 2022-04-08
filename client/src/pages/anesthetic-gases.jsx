@@ -9,7 +9,8 @@ import quizData from '../components/Quiz/data/quiz5.json';
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
 import Footer from '../components/Footer';
-
+import Navbar from "../components/Navbar/index2";
+import Sidebar from "../components/Sidebar/index2";
 let interval;
 const AnestheticGases = () => {
     const navigate = useNavigate();
@@ -86,10 +87,16 @@ const AnestheticGases = () => {
         )
       }
     };
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+      setIsOpen(!isOpen);
+    };
   return (
     <>
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} />
     <div className="Quiz_App">
-    {step === 1 && <Start onQuizStart={quizStartHandler}/>}
       <RenderQuiz/>
           {step === 2 && <Question 
             questionNumber={activeQuestion+1} 

@@ -4,6 +4,7 @@ import iitr from "../../images/IITR175.png";
 
 export const FooterContainer = styled.div`
   background-color: black;
+  margin-top: -1rem;
 `;
 
 export const FooterWrap = styled.div`
@@ -38,7 +39,7 @@ export const FooterLinkItems = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin: 16px;
-  text-align: left;
+  text-align: start;
   width: 160px;
   box-sizing: border-box;
   color: #fff;
@@ -100,10 +101,12 @@ export const WebsiteRights = styled.small`
   color: #fff;
   margin-bottom: 16px;
   font-size: 18px;
+  text-align: left;
 `;
 
 export const Img = styled.img`
   height: 4rem;
+  margin: 1rem;
 `;
 
 export const SocialIcons = styled.div`

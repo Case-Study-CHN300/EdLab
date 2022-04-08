@@ -23,6 +23,7 @@ export const ColumnLeft = styled.div`
   display: flex;
   color: "black";
   width: 100%;
+  z-index: 1;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -67,7 +68,12 @@ export const Image = styled(motion.img)`
   max-width: 250px;
   max-height: 250px;
 `;
-
+export const Img = styled.img`
+  width: 110%;
+  margin-top: -50rem;
+  margin-bottom: -1rem;
+  z-index: -100;
+`;
 export const ColumnRight = styled.div`
   display: flex;
   justify-content: center;

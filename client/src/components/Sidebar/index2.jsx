@@ -5,13 +5,11 @@ import {
   CloseIcon,
   SidebarWrapper,
   SidebarMenu,
-  SidebarLink,
   SideBtnWrap,
   SidebarRoute1,
   SidebarRoute2,
   SidebarLinkR
 } from "./SidebarElements";
-
 import { UserContext } from '../../App';
 const Sidebar = ({ isOpen, toggle }) => {
   const {state , dispatch} = useContext(UserContext);
@@ -45,12 +43,6 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>
-            About
-          </SidebarLink>
-          <SidebarLink to="discover" onClick={toggle}>
-            Modules
-          </SidebarLink>
           <SidebarLinkR to="/home" onClick={toggle}>
             Modules
           </SidebarLinkR>

@@ -10,6 +10,8 @@ import Download from '../components/DownloadSection/download3';
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
 import Footer from '../components/Footer';
+import Navbar from "../components/Navbar/index2";
+import Sidebar from "../components/Sidebar/index2";
 
 let interval;
 const ControlledSubstances = () => {
@@ -75,25 +77,37 @@ const ControlledSubstances = () => {
     const RenderQuiz = () => {
       if (marks >= 0) {
         return (
+          <>
+          <div>
+            <Download/>
+          </div>
           <ScoreCard       
           correctAnswers={marks}
           data={quizData.data}
           />
+          </>
         )
       } else {
         return (
           <>
+          {step === 1 && <div>
+            <Download/>
+          </div>}
           {step === 1 && <Start onQuizStart={quizStartHandler}/>}
           </>
         )
       }
     };
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+      setIsOpen(!isOpen);
+    };
   return (
     <>
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} />
     <div className="Quiz_App">
-      <div>
-        <Download/>
-      </div>
       <RenderQuiz/>
           {step === 2 && <Question 
             questionNumber={activeQuestion+1} 

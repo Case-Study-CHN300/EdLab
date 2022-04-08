@@ -3,7 +3,8 @@ import {useNavigate} from 'react-router-dom';
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { UserContext } from '../App';
-
+import Navbar from "../components/Navbar/index2";
+import Sidebar from "../components/Sidebar/index2";
 const Signin = () => {
 
   const Button = styled(motion.button)`
@@ -49,12 +50,18 @@ const Signin = () => {
         navigate("/home");
       }
   }
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
       <>
+        <Sidebar isOpen={isOpen} toggle={toggle} />
+        <Navbar toggle={toggle} />
         <div class="background">
             <div class="shape"></div>
             <div class="shape"></div>
-
             <form method="POST">
                 <h3>Welcome Back!</h3>
 
@@ -91,7 +98,6 @@ const Signin = () => {
                     New here? Register <a href='/signup'>here</a>
                 </span>
             </form>
-
         </div>
       </>
     

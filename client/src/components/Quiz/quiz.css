@@ -6,34 +6,36 @@ body, */
 
 .Quiz_App {
   display: flex;
-  margin-top: 8rem;
-  margin-bottom: 25rem;
+  margin-top:8rem;
+  margin-bottom: 7rem;
   align-items: center;
   justify-content: center;
   min-height: 100%;
+  background-color: red;
 }
 
 .quiz-p{
   text-align: left;
   font-size: 17px;
-  color: #007791;
+  color: white;
 }
 .quiz-span1{
   text-align: left;
   font-size: 25px;
-  color: #007791;
+  color: white;
   font-weight: bold;
 }
 .quiz-span2{
   text-align: left;
   font-size: 19px;
-  color: #007791;
+  color: white;
   padding: 0.5rem;
 }
 .quiz-question{
-  background-color: #EBFFFC;
+  background-color: #00CC8E;
   padding: 10px;
-  margin: 0;
+  margin: 3px;
+  border-radius: 5px;
   text-align: left;
 }
 .Quiz_App .card {
@@ -43,7 +45,6 @@ body, */
   text-align: center;
   border-radius: 10px;
   background-color: white;
-  padding: 0;
 }
 /* #007791 */
 

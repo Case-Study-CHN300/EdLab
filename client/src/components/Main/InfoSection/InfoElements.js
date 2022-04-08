@@ -1,15 +1,17 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const InfoContainer = styled.div`
+export const InfoContainer = styled(motion.div)`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
+  background: ${({ lightBg }) => (lightBg ? "#0be586" : "#001122")};
+  margin-top: ${({ lightBg }) => (lightBg ? "-2rem" : "0")};
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
 `;
 
-export const InfoWrapper = styled.div`
+export const InfoWrapper = styled(motion.div)`
   display: grid;
   z-index: 1;
   height: 860px;
@@ -19,7 +21,19 @@ export const InfoWrapper = styled.div`
   margin-right: auto;
   padding: 0 24px;
   justify-content: center;
+  margin-bottom: ${({ last }) => (last ? "-10rem" : "0")};
 `;
+
+export const variants = {
+  initial: {},
+  animate: {
+    y: [5, 0, 5],
+    transition: {
+      duration: 1.6,
+      ease: "linear",
+    },
+  },
+};
 
 export const InfoRow = styled.div`
   display: grid;
@@ -27,6 +41,7 @@ export const InfoRow = styled.div`
   align-items: center;
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2 col1'` : `'col1 col2'`};
+  margin-top: ${({ imgStart }) => (imgStart ? "-10rem" : "0")};
 
   @media screen and (max-width: 768px) {
     grid-template-areas: ${({ imgStart }) =>
@@ -34,15 +49,15 @@ export const InfoRow = styled.div`
   }
 `;
 
-export const Column1 = styled.div`
+export const Column1 = styled(motion.div)`
   margin-bottom: 15px;
-  padding: 0 15px;
+  padding: 0 30px;
   grid-area: col1;
 `;
 
 export const Column2 = styled.div`
   margin-bottom: 15px;
-  padding: 0 50px;
+  padding: 0 10px;
   grid-area: col2;
 `;
 
@@ -92,7 +107,7 @@ export const ImgWrap = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 100%;
-  margin: 0 0 10px 0;
-  padding: ${({ second }) => (second ? "2rem" : "0")};
+  width: 110%;
+  margin: 0rem;
+  display: ${({ lightBg }) => (lightBg ? "" : "none")};
 `;

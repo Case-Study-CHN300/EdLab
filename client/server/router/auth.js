@@ -11,9 +11,9 @@ router.get("/", (req, res) => {
 });
 
 router.post("/register", async (req, res) => {
-  const { name, email, password, cpassword } = req.body;
+  const { name, email, supervisor, password, cpassword } = req.body;
 
-  if (!name || !email || !password || !cpassword) {
+  if (!name || !email || !supervisor || !password || !cpassword) {
     return res.status(400).json({ error: "Plz fill the field properly" });
   }
   let regex = new RegExp(/^[\w]+[\w.%+-]*@[\w.-]+\.iitr\.ac\.in$/);
@@ -28,7 +28,7 @@ router.post("/register", async (req, res) => {
     } else if (password !== cpassword) {
       return res.status(400).json({ error: "password not matching" });
     } else {
-      const user = new User({ name, email, password, cpassword });
+      const user = new User({ name, email, supervisor, password, cpassword });
       //hash the password here
 
       await user.save();
@@ -78,7 +78,7 @@ router.get("/home", authenticate, (req, res) => {
   res.send(req.rootUser);
 });
 
-router.post("/Introduction-to-Research-Safety", async (req, res) => {
+router.post("/General-Safety", async (req, res) => {
   const { correct } = req.body;
   const token = req.cookies.jwtoken;
 
@@ -95,7 +95,7 @@ router.post("/Introduction-to-Research-Safety", async (req, res) => {
     await rootUser.save();
   }
 });
-router.get("/Introduction-to-Research-Safety", authenticate, (req, res) => {
+router.get("/General-Safety", authenticate, (req, res) => {
   res.send(req.rootUser);
 });
 

@@ -65,7 +65,7 @@ const Navbar = ({ toggle }) => {
       <Nav scrollnav={scrollnav}>
             <NavbarContainer>
               <NavLogo scrollnav={scrollnav} to="/" onClick={toggleHome}>
-                Chemiopedia
+                Leetcode
               </NavLogo >
               <MobileIcon scrollnav={scrollnav} onClick={toggle}>
                 <FaBars />
@@ -104,7 +104,7 @@ const Navbar = ({ toggle }) => {
                     exact="true"
                     offset={-80}
                   >
-                    Courses
+                    Modules
                   </NavLinkR>
                 </NavItem>
                 
