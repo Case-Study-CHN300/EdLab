@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom';
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -55,6 +55,9 @@ const Signin = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
       <>
         <Sidebar isOpen={isOpen} toggle={toggle} />

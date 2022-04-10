@@ -70,8 +70,8 @@ export const Image = styled(motion.img)`
 `;
 export const Img = styled.img`
   width: 110%;
-  margin-top: -50rem;
-  margin-bottom: -1rem;
+  margin-top: -30%;
+  margin-bottom: -5rem;
   z-index: -100;
 `;
 export const ColumnRight = styled.div`

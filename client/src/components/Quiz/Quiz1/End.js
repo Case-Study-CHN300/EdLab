@@ -25,7 +25,7 @@ const End = ({ results, data, onReset, onAnswersCheck, time }) => {
 
   const PostData = async (correct) => {
     // event.preventDefault();
-    const res = await fetch("/Introduction-to-Research-Safety", {
+    const res = await fetch("/General-Safety", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

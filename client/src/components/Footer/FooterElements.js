@@ -37,9 +37,9 @@ export const FooterLinksWrapper = styled.div`
 export const FooterLinkItems = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   margin: 16px;
-  text-align: start;
+  text-align: center;
   width: 160px;
   box-sizing: border-box;
   color: #fff;

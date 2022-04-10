@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , {useState , useEffect} from 'react'
 import {useNavigate} from 'react-router-dom';
 import '../components/Form/Form.css';
 import validate from '../components/Form/validateInfo';
@@ -26,7 +26,6 @@ const Signup = () => {
 
    let name , value;
    const handleInputs = (e) =>{
-       console.log(e);
        name = e.target.name;
        value = e.target.value;
 
@@ -52,7 +51,7 @@ const Signup = () => {
     if(res.status === 400 || !data){
         window.alert("Invalid registration");
     }
-    else{ // error in this part
+    else{ 
         window.alert("Valid registration, please sign-in to proceed");
         navigate("/signin");
     }
@@ -62,6 +61,9 @@ const Signup = () => {
    const toggle = () => {
      setIsOpen(!isOpen);
    };
+   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
             <Sidebar isOpen={isOpen} toggle={toggle} />

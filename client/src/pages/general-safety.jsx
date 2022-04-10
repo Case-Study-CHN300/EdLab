@@ -7,7 +7,6 @@ import ScoreCard from '../components/Quiz/ScoreCard';
 import Modal from '../components/Quiz/Modal';
 import quizData from '../components/Quiz/data/quiz1.json';
 import Download from '../components/DownloadSection/download1';
-import "react-awesome-slider/dist/styles.css";
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
 import Footer from '../components/Footer';

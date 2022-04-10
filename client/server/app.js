@@ -3,7 +3,7 @@ const express = require("express");
 const { default: mongoose } = require("mongoose");
 const cors = require("cors");
 const app = express();
-
+app.set("view engine", "ejs");
 var cookieParser = require("cookie-parser");
 
 dotenv.config({ path: "./config.env" });

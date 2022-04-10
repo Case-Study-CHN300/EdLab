@@ -6,6 +6,8 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const authenticate = require("../middleware/authenticate");
 
+const admin_email = process.env.ADMIN_EMAIL;
+
 router.get("/", (req, res) => {
   res.send("Hello world from the router");
 });
@@ -181,6 +183,21 @@ router.post("/Safe-Use-Of-Anesthetic-Gases", async (req, res) => {
 });
 router.get("/Safe-Use-Of-Anesthetic-Gases", authenticate, (req, res) => {
   res.send(req.rootUser);
+});
+
+router.get("/admin", authenticate, (req, res) => {
+  if (req.rootUser.email === `${admin_email}`) {
+    User.find({}).exec(function (err, all_users) {
+      if (err) throw err;
+      if (all_users) {
+        res.end(JSON.stringify(all_users));
+      } else {
+        res.end();
+      }
+    });
+  } else {
+    res.status(400).json({ error: "No valid admin" });
+  }
 });
 
 router.get("/logout", authenticate, (req, res) => {

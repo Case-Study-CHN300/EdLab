@@ -3,6 +3,7 @@ import PlanetTwo from "../../../images/planet-2.svg";
 import PlanetThree from "../../../images/planet-3.svg";
 import PlanetFour from "../../../images/planet-4.svg";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import {
   Section,
   Container,
@@ -14,11 +15,14 @@ import {
 } from "./HeroElements";
 import WaveBlue from "../../../images/wave-blue-dark.svg";
 const HeroSection = () => {
+  const navigate = useNavigate();
   const fadeLeft = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
   };
-
+  const changeRoute = () => {
+    navigate("/home");
+  };
   return (
     <>
       <Section>
@@ -41,6 +45,7 @@ const HeroSection = () => {
               Journey to the unknown
             </motion.p>
             <Button
+              onClick={changeRoute}
               whileHover={{ scale: 1.05 }}
               whileTap={{
                 scale: 0.95,

@@ -74,6 +74,7 @@ export const TopLine = styled.p`
   letter-spacing: 1.4px;
   text-transform: uppercase;
   margin-bottom: 16px;
+  color: ${({ lightText }) => (lightText ? "#0BE586" : "#4169e1")};
 `;
 
 export const Heading = styled.h1`
@@ -104,6 +105,9 @@ export const BtnWrap = styled.div`
 export const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;
+  @media screen and (min-width: 480px) {
+    padding: 32px;
+  }
 `;
 
 export const Img = styled.img`
