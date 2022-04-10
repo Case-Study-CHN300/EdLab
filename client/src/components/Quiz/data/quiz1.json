@@ -1,34 +1,254 @@
 {
   "data": [
     {
-      "question": "The University requires all colleges or departments with laboratories to follow the University's Chemical Hygiene Plan (CHP).",
-      "choices": ["True", "False", "Depends", "Cannot say"],
+      "question": "Fire safety is the set of practices:",
+      "choices": ["Intended to reduce the destruction caused by fire", "prevent ignition of an uncontrolled fire", "limit the development and effects of a fire after it starts", "All the above"],
+      "answer": "All the above"
+    },
+    {
+      "question": "What is definition of fire",
+      "choices": ["A fire is self-sustained oxidation of a fuel that emits heat and light", "A fire is artificial phenomena", "A fire absorbs heat", "A fire is self-sustained reduction of a fuel that emits heat and light"],
+      "answer": "A fire is self-sustained oxidation of a fuel that emits heat and light"
+    },
+    {
+      "question": "How many variables affect fire:",
+      "choices": ["4", "2", "3", "1"],
+      "answer": "3"
+    },
+    {
+      "question": "What are the elements of fire tetrahedron?",
+      "choices": ["Fuel, oxygen, temperature, chain reaction", "Fuel, carbon dioxide, temperature, chain reaction", "Ash, nitrogen, temperature, chain reaction", "Fuel, oxygen, temperature, displacement reaction"],
+      "answer": "Fuel, oxygen, temperature, chain reaction"
+    },
+    {
+      "question": "How many variables are required to sustain fire:",
+      "choices": ["5", "4", "3", "2"],
+      "answer": "4"
+    },
+    {
+      "question": "Which of the following is not a product of fire chemical chain reactions?",
+      "choices": ["CO", "CO2", "N2", "C"],
+      "answer": "N2"
+    },
+    {
+      "question": "How does fire prevention differ from fire protection?",
+      "choices": ["fire prevention attempts to eliminate the variables of the fire triangle before a fire occurs", "fire prevention attempts to control the variables of the fire triangle before a fire occurs", "fire prevention enhances the variables of the fire triangle if a fire occurs", "It is the same"],
+      "answer": "fire prevention attempts to control the variables of the fire triangle before a fire occurs"
+    },
+    {
+      "question": "Fire prevention strategies include:",
+      "choices": ["Using fire extinguishers", "Controlling heat sources", "Oxidise fuels", "None of the above"],
+      "answer": "Controlling heat sources"
+    },
+    {
+      "question": "Which of the following is not a stage of fire?",
+      "choices": ["Incident stage", "Smoldering stage", "Free burning stage", "Both b and c"],
+      "answer": "Incident stage"
+    },
+    {
+      "question": "_________ fire involve flammable and combustible liquids and gasses such as gasoline, alcohols, and propane",
+      "choices": ["Class K", "Class A", "Class B", "Class D"],
+      "answer": "Class B"
+    }, 
+    {
+      "question": "_______ require special extinguishing agents that are usually produced for the specific metal.",
+      "choices": ["Class K", "Class B", "Class A", "Class D"],
+      "answer": "Class D"
+    }, 
+    {
+      "question": "Dry chemicals used to interrupt the chemical chain reactions are also effective on ________ fires.",
+      "choices": ["Class K", "Class B", "Class A", "Class D"],
+      "answer": "Class A"
+    },
+    {
+      "question": "______ fires most often occur where cooking media (fats, oils, and greases) are used, and most of the time are found in commercial cooking operations.",
+      "choices": ["Class K", "Class B", "Class A", "Class D"],
+      "answer": "Class K"
+    }, 
+    {
+      "question": "Human survival, even for properly protected fire fighters, is difficult if not impossible for a few seconds within a compartment following a flashover for which stage of fire?",
+      "choices": ["Incipient stage", "Free burning stage", "Both a and b", "None of the above"],
+      "answer": "Free burning stage"
+    }, 
+    {
+      "question": " Room temperatures can range from 1000–1500°F in:",
+      "choices": ["Smoldering stage", "Free burning stage", "Both a and b", "None of the above"],
+      "answer": "Smoldering stage"
+    },
+    {
+      "question": "The objectives of U.S. The Department of Transportation labeling system standard are to",
+      "choices": ["Provide an immediate warning of potential danger", "Inform emergency responders of the nature of the hazard", " State emergency spill or release control procedures", "All the above"],
+      "answer": "All the above"
+    }, 
+    {
+      "question": "Which of the following is not flammable gas?",
+      "choices": ["Ethene", "Methane", "Methyl chloride", "All the above"],
+      "answer": "Ethene"
+    }, 
+    {
+      "question": "The letter W with a bar through it indicates:",
+      "choices": ["Use no water", "Avoid the use of water", "Use no steam", "Use oxidizer"],
+      "answer": "Avoid the use of water"
+    }, 
+    {
+      "question": "The NFPA 704 Diamond indicates:",
+      "choices": ["Health", "Flammability", "Reactivity", "All of these"],
+      "answer": "All of these"
+    },
+    {
+      "question": "What are the colours in NFPA 704 Diamond:",
+      "choices": ["Blue, Orange, White, Red", "Blue, Purple, green, white", "Blue, red, yellow, white", "Purple, pink, red, green"],
+      "answer": "Blue, red, yellow, white"
+    }, 
+    {
+      "question": "What are the three elements of the fire triangle?",
+      "choices": ["Heat, oxygen and fuel", "Heat, nitrogen and fuel", "light, oxygen and fuel", "Heat, oxygen and gas"],
+      "answer": "Class K"
+    }, 
+    {
+      "question": "This heat must be controlled and kept away from fuel unless carefully controlled.",
+      "choices": ["True", "False", "Cannot Say", "Depends"],
+      "answer": "True"
+    }, 
+    {
+      "question": "Oxygen gas is used:",
+      "choices": ["in welding", "in hyperbaric chambers as a medical treatment", "in steelworks and chemical plants", "All of the above"],
+      "answer": "All of the above"
+    }, 
+    {
+      "question": "The main causes of fires and explosions when using oxygen are:",
+      "choices": ["oxygen enrichment from leaking equipment", "use of materials compatible with oxygen", "use of oxygen in equipment designed for oxygen service", "correct operation of oxygen equipment"],
+      "answer": "Class K"
+    },
+    {
+      "question": "Oxygen should be used to “sweeten” the air in a confined space",
+      "choices": ["True", "False", "Cannot Say", "Depends"],
+      "answer": "False"
+    },
+    {
+      "question": "Flammable materials include:",
+      "choices": ["flammable liquids (e.g. petrol)", "flammable gasses (e.g. propane and butane)", "flammable solids (e.g. charcoal, paper)", "All of the above"],
+      "answer": "All of the above"
+    },
+    {
+      "question": "Flammable liquids should not be decanted within the store",
+      "choices": ["True", "False", "Cannot Say", "Depends"],
       "answer": "True"
     },
     {
-      "question": "If you believe a work procedure will harm you, you may refuse to perform the procedure.",
-      "choices": ["True", "False", "Depends", "Cannot say"],
+      "question": "Equipment or components that radiate heat, such as kettles, catalytic converters and mufflers, cannot be ignition sources.",
+      "choices": ["True", "False", "Cannot Say", "Depends"],
+      "answer": "False"
+    },
+    {
+      "question": "OSHA describes a hazardous atmosphere as:",
+      "choices": ["one which is oxygen-deficient", "one which is oxygen-rich", "Both of the above", "None of the above"],
+      "answer": "Both of the above"
+    },
+    {
+      "question": "Class A of fire involves:",
+      "choices": ["flammable gasses or liquids, such as propane", "vegetable or animal cooking oils or fats", "energized electrical components", "ordinary combustibles, such as paper, trash, some plastics."],
+      "answer": "ordinary combustibles, such as paper, trash, some plastics."
+    },
+    {
+      "question": "Which of these is not a part of the fire extinguisher?",
+      "choices": ["Discharge lever", "Discharge hose", "Discharge nozzle", "Water panel"],
+      "answer": "Water panel"
+    },
+    {
+      "question": "What is the easy acronym when using a fire extinguisher?",
+      "choices": ["P.A.S.S", "P.I.S.S", "P.E.S.S", "P.O.S.S"],
+      "answer": "P.A.S.S"
+    },
+    {
+      "question": "The most common equipment in buildings to facilitate emergency evacuations are:",
+      "choices": ["fire alarms", "exit signs", "emergency lights", "All of the above"],
+      "answer": "All of the above"
+    },
+    {
+      "question": "The urgent instant egress or escape of people away from a place containing an imminent threat, an ongoing threat, or a hazard to lives or property is referred to as emergency evacuation.",
+      "choices": ["True", "False", "Cannot Say", "Depends"],
       "answer": "True"
     },
     {
-      "question": "Eyewashes are a form of safety equipment:",
-      "choices": ["True", "False", "Depends", "Cannot say"],
+      "question": "Class K of fire involves:",
+      "choices": ["flammable gasses or liquids, such as propane", "vegetable or animal cooking oils or fats", "energized electrical components", "ordinary combustibles, such as paper, trash, some plastics"],
+      "answer": "vegetable or animal cooking oils or fats"
+    },
+    {
+      "question": "Which of the following properties are of inert gas?",
+      "choices": ["Resistant to chemical action", "Explodes if it is mixed with air", "Supports combustion", "Oxygen deficient"],
+      "answer": "Resistant to chemical action"
+    },
+    {
+      "question": "Leakage of any gas (except oxygen) inside a confined/enclosed space can not cause displacement of oxygen resulting in an oxygen deficient atmosphere.",
+      "choices": ["True", "False", "Cannot Say", "Depends"],
+      "answer": "False"
+    },
+    {
+      "question": "Hazards while using gas cylinder is/are?",
+      "choices": ["Oxygen deficient atmosphere resulting in asphyxiation.", "If the valve breaks, the sudden release of compressed gas didn’t turn it into a lethal projectile.", "Gas cylinders should not be capped.", "None of the above"],
+      "answer": "Oxygen deficient atmosphere resulting in asphyxiation."
+    },
+    {
+      "question": "Percentage of oxygen deficient in atmosphere is unsafe and not permitted.",
+      "choices": ["Above 21%", "19.5%", "12 - 19.5", "Less than 6%"],
+      "answer": "19.5%"
+    },
+    {
+      "question": "An atmosphere having more than 21% of oxygen is considered as an oxygen enriched atmosphere and is safe for entry/working.",
+      "choices": ["True", "False", "Cannot Say", "Depends"],
+      "answer": "False"
+    },
+    {
+      "question": "If the vapour air mixture is within the flammable range, it can explode in the presence of an ignition source.",
+      "choices": ["True", "False", "Cannot Say", "Depends"],
       "answer": "True"
     },
     {
-      "question": "University policies are based on federal and state regulations and best practices.",
-      "choices": ["True", "False", "Depends", "Cannot say"],
-      "answer": "True"
+      "question": "TLV Stands for?",
+      "choices": ["Type length value", "To value loan", "Threshold Limit Value", "None of the above"],
+      "answer": "Threshold Limit Value"
     },
     {
-      "question": "The University must pay for a medical examination and any necessary treatment:",
-      "choices": [" If you have any signs or symptoms associated with exposure to any hazardous substance used in your laboratory.", "Exposure monitoring of your laboratory reveals an exposure level that is above the PEL.", "You are exposed during a leak, spill, explosion or other hazardous occurrence in your laboratory.", "All of the above."],
-      "answer": "All of the above."
+      "question": "What one should not do while receiving gas cylinders",
+      "choices": ["Properly labeled", "Accept cylinders without label", "Check Damage", "Cylinders have valve caps"],
+      "answer": "Accept cylinders without label"
     },
     {
-      "question": "Which resource provides safe and compliant practices for using chemicals, and is often used to develop standard operating procedures?",
-      "choices": ["Radiation Protection Manual.", "NRC's Prudent Practices.", "Laboratory Safety Standard.", "Institutional Biosafety Committee."],
-      "answer": "Institutional Biosafety Committee."
+      "question": "Which of the following needs to be checked while storing gas cylinders inside labs",
+      "choices": ["Gas cylinders should use immediately", "Cylinders can place near heat sources", "Materials can store above cylinders", "All of the above"],
+      "answer": "Gas cylinders should use immediately"
+    },
+    {
+      "question": "Which of the following is false regarding safe use of gas cylinders?",
+      "choices": ["Do not tamper with cylinders", "Use correct regulator for cylinder", "Use damaged pipes, regulators", "Ensure proper ventilation"],
+      "answer": "Use damaged pipes, regulators"
+    },
+    {
+      "question": "Which of the following is/are correct emergency measures",
+      "choices": ["Protective equipments should be used", "Gas supplier may not be intimated", "Personal protective equipment should not be used while dealing with gas leaks", "All of the above"],
+      "answer": "Protective equipments should be used"
+    },
+    {
+      "question": "What is the pressure above which cylinder should be operated?",
+      "choices": ["15 psi", "10 psi", "25 psi", "35 psi"],
+      "answer": "25 psi"
+    },
+    {
+      "question": "When should we close the cylinder valve?",
+      "choices": ["Work in progress", "Work is completed", "Cylinder is filled", "Before work"],
+      "answer": "Work is completed"
+    },
+    {
+      "question": "Where should we store toxic gases?",
+      "choices": ["Inside Vessel", "Gas Cabinet", "On gas cylinder", "Near flame"],
+      "answer": "Gas Cabinet"
+    },
+    {
+      "question": "Where should we store toxic gases?",
+      "choices": ["Inside Vessel", "Gas Cabinet", "On gas cylinder", "Near flame"],
+      "answer": "Gas Cabinet"
     }
   ]
 }

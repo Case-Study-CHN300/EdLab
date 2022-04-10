@@ -13,7 +13,19 @@ const Instructions = ({ onClose }) => {
           <ul>
             <li className="mb-6">
               <p>
-                <strong>...............................</strong>
+                <strong>You can attempt this quiz only once.</strong>
+              </p>
+            </li>
+            <li className="mb-6">
+              <p>
+                <strong>
+                  If you are not ready, you can go back and come back later.
+                </strong>
+              </p>
+            </li>
+            <li className="mb-6">
+              <p>
+                <strong>Your score and time taken will be recorded.</strong>
               </p>
             </li>
           </ul>

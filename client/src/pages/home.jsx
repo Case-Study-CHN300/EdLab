@@ -28,7 +28,7 @@ import Typewriter from "typewriter-effect";
 import Navbar from "../components/Navbar/index2";
 import Sidebar from "../components/Sidebar/index2";
 
-const Home = () => {
+const Home = ({bgcolor}) => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState({});
 
@@ -102,7 +102,7 @@ const Home = () => {
               onInit={(typewriter)=> {
               typewriter
               
-              .typeString("Leetcode")
+              .typeString("EdLab")
               .pauseFor(1000)
               .deleteAll()
               .typeString("Welcomes You")

@@ -12,7 +12,6 @@
   height: 220px;
   background: #fff;
   padding: 30px;
-  border-radius: 50%;
   box-shadow: 0 0 22px #3336;
   transition: .6s;
   margin: 0 25px;
@@ -20,6 +19,7 @@
 .profile-card:hover{
   border-radius: 10px;
   height: 260px;
+  padding: 20px;
 }
 .profile-card .img{
   position: relative;
@@ -33,7 +33,6 @@
 }
 .img img{
   width: 100%;
-  border-radius: 50%;
   box-shadow: 0 0 22px #3336;
   transition: .6s;
 }

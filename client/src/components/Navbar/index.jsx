@@ -65,7 +65,7 @@ const Navbar = ({ toggle }) => {
       <Nav scrollnav={scrollnav}>
             <NavbarContainer>
               <NavLogo scrollnav={scrollnav} to="/" onClick={toggleHome}>
-                Leetcode
+                EdLab
               </NavLogo >
               <MobileIcon scrollnav={scrollnav} onClick={toggle}>
                 <FaBars />

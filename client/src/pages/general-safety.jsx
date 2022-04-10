@@ -80,7 +80,7 @@ const GeneralSafety = () => {
       if (marks >= 0) {
         return (
           <>
-          <Download/>
+          <Download text={"Safe Use of Anesthetic Gases"}/>
           <ScoreCard       
           correctAnswers={marks}
           data={quizData.data}

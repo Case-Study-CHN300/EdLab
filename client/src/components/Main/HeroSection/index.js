@@ -33,7 +33,7 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              Welcome to Space
+              Welcome to EdLab
             </motion.h1>
             <motion.p
               z-index="1"
@@ -42,7 +42,7 @@ const HeroSection = () => {
               animate="visible"
               transition={{ duration: 1 }}
             >
-              Journey to the unknown
+              Online Safety Training Module
             </motion.p>
             <Button
               onClick={changeRoute}

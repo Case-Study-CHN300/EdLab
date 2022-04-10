@@ -27,16 +27,16 @@ app.get("/download1", (req, res) => {
   res.download("./pdfs/General-Safety.pdf");
 });
 app.get("/download2", (req, res) => {
-  res.download("./pdfs/Introduction-to-Research-Safety.pdf");
+  res.download("./pdfs/General-Safety.pdf");
 });
 app.get("/download3", (req, res) => {
-  res.download("./pdfs/Controlled-Substances.pdf");
+  res.download("./pdfs/General-Safety.pdf");
 });
 app.get("/download4", (req, res) => {
-  res.download("./pdfs/Introduction-to-Research-Safety.pdf");
+  res.download("./pdfs/General-Safety.pdf");
 });
 app.get("/download5", (req, res) => {
-  res.download("./pdfs/Introduction-to-Research-Safety.pdf");
+  res.download("./pdfs/General-Safety.pdf");
 });
 
 app.get("/signup", (req, res) => {

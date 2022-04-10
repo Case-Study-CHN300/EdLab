@@ -21,12 +21,12 @@ const Download = () => {
   const download = (e) => {
     e.preventDefault();
     Axios({
-      url: "http://localhost:5000/download3",
+      url: "http://localhost:5000/download5",
       method: "GET",
       responseType: "blob",
     }).then((res) => {
       console.log("res");
-      FileDownload(res.data, "Controlled_Substances.pdf");
+      FileDownload(res.data, "Safe_Use_Of_Anesthetic_Gases.pdf");
     });
   };
   return (
@@ -43,7 +43,7 @@ const Download = () => {
                 animate="animate"
                 transition={{ duration: 1 }}
               >
-                Controlled Substances
+                Safe Use of Anesthetic Gases
               </motion.p>
               <BtnWrrap>
                 <Button

@@ -31,7 +31,7 @@ const Footer = () => {
             {/* <SocialLogo to="/">Leetcode</SocialLogo> */}
             <Img src={iitr}></Img>
             <WebsiteRights>
-              Copyright © {new Date().getFullYear()} | LeetCode
+              Copyright © {new Date().getFullYear()} | EdLab
             </WebsiteRights>
             {/* <SocialIcons>
               <SocialIconLink href="/" target="_black" aria-label="Facebook">

@@ -5,16 +5,17 @@ import Question from '../components/Quiz/Question';
 import End from '../components/Quiz/Quiz3/End';
 import ScoreCard from '../components/Quiz/ScoreCard';
 import Modal from '../components/Quiz/Modal';
-import quizData from '../components/Quiz/data/quiz3.json';
+import quizData from '../components/Quiz/data/quiz1.json';
 import Download from '../components/DownloadSection/download3';
 import "../components/Quiz/quiz.css";
 import 'bulma/css/bulma.min.css';
 import Footer from '../components/Footer';
+import Instructions from '../components/Quiz/Instructions';
 import Navbar from "../components/Navbar/index2";
 import Sidebar from "../components/Sidebar/index2";
 
 let interval;
-const ControlledSubstances = () => {
+const ConstrolledSubstances = () => {
     const navigate = useNavigate();
     const [userData, setUserData] = useState({});
     const callHomePage = async () => {
@@ -50,6 +51,7 @@ const ControlledSubstances = () => {
     const [activeQuestion, setActiveQuestion] = useState(0);
     const [answers, setAnswers] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const [showInstructions, setShowInstructions] = useState(false);
     const [time, setTime] = useState(0);
   
     useEffect(() => {
@@ -59,10 +61,8 @@ const ControlledSubstances = () => {
     }, [step]);
   
     const quizStartHandler = () => {
+      setShowInstructions(true);
       setStep(2);
-      interval = setInterval(() => {
-        setTime(prevTime => prevTime + 1);
-      }, 1000);
     }
   
     const resetClickHandler = () => {
@@ -73,14 +73,14 @@ const ControlledSubstances = () => {
       navigate("/home")
     }
     const marks = userData.course3Marks;
-
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [])
     const RenderQuiz = () => {
       if (marks >= 0) {
         return (
           <>
-          <div>
-            <Download/>
-          </div>
+          <Download text={"Safe Use of Anesthetic Gases"}/>
           <ScoreCard       
           correctAnswers={marks}
           data={quizData.data}
@@ -90,9 +90,7 @@ const ControlledSubstances = () => {
       } else {
         return (
           <>
-          {step === 1 && <div>
-            <Download/>
-          </div>}
+          {step === 1 && <Download/>}
           {step === 1 && <Start onQuizStart={quizStartHandler}/>}
           </>
         )
@@ -104,38 +102,46 @@ const ControlledSubstances = () => {
       setIsOpen(!isOpen);
     };
   return (
-    <>
+    <> 
             <Sidebar isOpen={isOpen} toggle={toggle} />
         <Navbar toggle={toggle} />
-    <div className="Quiz_App">
-      <RenderQuiz/>
-          {step === 2 && <Question 
+    <RenderQuiz/>
+    {step === 2 && <Question
             questionNumber={activeQuestion+1} 
-            questionsLength={quizData.data.length}
+            questionsLength={quizData.data.length} 
             data={quizData.data[activeQuestion]}
             onAnswerUpdate={setAnswers}
             numberOfQuestions={quizData.data.length}
             activeQuestion={activeQuestion}
             onSetActiveQuestion={setActiveQuestion}
             onSetStep={setStep}
-          />}
-          {step === 3 && <End 
+    />}
+    {step === 3 && <End 
             results={answers}
             data={quizData.data}
             onReset={resetClickHandler}
             onAnswersCheck={() => setShowModal(true)}
             time={time}
-          />}
-    
+    />}
+    <div className="Quiz_App">
           {showModal && <Modal 
             onClose={() => setShowModal(false)}
             results={answers}
             data={quizData.data}
           />}
-    </div>   
-    <Footer/>
+          {showInstructions && <Instructions 
+            onClose={() => {
+              setShowInstructions(false)
+              interval = setInterval(() => {
+                setTime(prevTime => prevTime + 1);
+              }, 1000);
+            }}
+          />}
+    </div> 
+    
+    <Footer/>  
     </>
   )
 }
 
-export default ControlledSubstances;
+export default ConstrolledSubstances
