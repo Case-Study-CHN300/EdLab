@@ -28,7 +28,7 @@ export const homeObjTwo = {
   topLine: "Anywhere / anytime",
   headLine: "Learning made easier",
   description:
-    "You can learn and attempt quizzes from wherever you want at any time so that you dont miss anything",
+    "You can learn and attempt quizzes from wherever you want at any time so that you don't miss anything",
   buttonLabel: "Get Started",
   imgStart: true,
   img: map,

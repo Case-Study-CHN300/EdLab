@@ -145,31 +145,31 @@ const Home = ({bgcolor}) => {
         >
           <CoursesIcon src={generalSafety} />
           <CoursesH2 >General Safety</CoursesH2>
-          <CoursesP >Introduction to Research Safety is related to general Safety</CoursesP>
+          <CoursesP >General Safety is a multi-disciplinary approach ensuring safe working practices</CoursesP>
         </CoursesCard>
         <CoursesCard onClick={changeRoute2}
         >
           <CoursesIcon src={chemicalSafety} />
           <CoursesH2>Chemical Safety</CoursesH2>
-          <CoursesP >Introduction to Research Safety is related to general Safety</CoursesP>
+          <CoursesP >Chemical safety includes all those practices designed to minimise the risk of exposure to potentially hazardous chemicals</CoursesP>
         </CoursesCard>
         <CoursesCard onClick={changeRoute3}
         >
           <CoursesIcon src={controlledSubstances} />
           <CoursesH2>Controlled Substances</CoursesH2>
-          <CoursesP >Introduction to Research Safety is related to general Safety</CoursesP>
+          <CoursesP >A controlled substance is generally a chemical whose manufacture, possession and use is regulated by a government.</CoursesP>
         </CoursesCard>
         <CoursesCard onClick={changeRoute4}
         >
           <CoursesIcon src={formaldehyde} />
           <CoursesH2>Formaldehyde</CoursesH2>
-          <CoursesP >Introduction to Research Safety is related to general Safety</CoursesP>
+          <CoursesP >Formaldehyde can act as a sensitizing agent and is a known human carcinogen i.e. linked to nasal and lung cancer</CoursesP>
         </CoursesCard>
         <CoursesCard onClick={changeRoute5}
         >
           <CoursesIcon src={anestheicGases} />
           <CoursesH2>Safe Use of Anesthetic Gases</CoursesH2>
-          <CoursesP >Introduction to Research Safety is related to general Safety</CoursesP>
+          <CoursesP >Workplace exposures to anesthetic gases occur in hospital-based / stand-alone operating rooms, recovery rooms, dental operatories, and veterinary facilities.</CoursesP>
         </CoursesCard>
       </CoursesWrapper>
     </CoursesContainer>
