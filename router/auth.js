@@ -8,10 +8,6 @@ const authenticate = require("../middleware/authenticate");
 
 const admin_email = process.env.ADMIN_EMAIL;
 
-router.get("/", (req, res) => {
-  res.send("Hello world from the router");
-});
-
 router.post("/register", async (req, res) => {
   const { name, email, supervisor, password, cpassword } = req.body;
 

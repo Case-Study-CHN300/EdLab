@@ -3,6 +3,8 @@ const express = require("express");
 const { default: mongoose } = require("mongoose");
 const cors = require("cors");
 const app = express();
+const path = require("path");
+
 app.set("view engine", "ejs");
 var cookieParser = require("cookie-parser");
 
@@ -17,7 +19,7 @@ app.use(cookieParser());
 // link the router files
 app.use(require("./router/auth"));
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 app.get("/signin", (req, res) => {
   res.send("Hello world from the server");
@@ -45,6 +47,14 @@ app.get("/signup", (req, res) => {
 app.get("/logout", (req, res) => {
   res.send("Hello world from the server");
 });
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });

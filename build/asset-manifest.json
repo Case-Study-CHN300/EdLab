@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2b767d6e.css",
+    "main.js": "/static/js/main.385b5bb4.js",
+    "static/media/karan.jpeg": "/static/media/karan.aa19c0b4326e7df84d5c.jpeg",
+    "static/media/IITR175.png": "/static/media/IITR175.ffcd6597c34b385b6727.png",
+    "static/media/map.svg": "/static/media/map.4525c931442f42094ce835b9780e4cbb.svg",
+    "static/media/controlled-substances.svg": "/static/media/controlled-substances.dc198f8cc0f7a8142b3bc9c956c2d842.svg",
+    "static/media/chemical-safety.svg": "/static/media/chemical-safety.5ca43afdbdf02aadea3430c814afc55e.svg",
+    "static/media/quiz-img.svg": "/static/media/quiz-img.5892eb02975995f6b22fd009e4f233ce.svg",
+    "static/media/flask-1.svg": "/static/media/flask-1.21f4242feaa2aef984c653de6ac6a2ca.svg",
+    "static/media/anesthetic-gases.svg": "/static/media/anesthetic-gases.1bb1d61286aac1adbc43cb52255e0c46.svg",
+    "static/media/formaldehyde.svg": "/static/media/formaldehyde.c24560484d5df3c17fc89afdb3294f59.svg",
+    "static/media/scorecard.svg": "/static/media/scorecard.254b7760ad64f22650f98aaa44c64f01.svg",
+    "static/media/general-safety.svg": "/static/media/general-safety.a80199ceba2196dea383010d3538bd13.svg",
+    "static/media/download-img.svg": "/static/media/download-img.f96667e66f7e5b1280ea200f2841af3d.svg",
+    "static/media/planet-2.svg": "/static/media/planet-2.fb8c5b2d26d7a061f68e813ec862e6e2.svg",
+    "static/media/planet-3.svg": "/static/media/planet-3.c1e3d5ea944d81d505645dbed91927e3.svg",
+    "static/media/wave-green-black.svg": "/static/media/wave-green-black.5868277573a76e6b297d00329538a3d7.svg",
+    "static/media/planet-4.svg": "/static/media/planet-4.49f6206ca13d82d87ef0c853dc4d4459.svg",
+    "static/media/wave-green-grey.svg": "/static/media/wave-green-grey.0b68d0e401bd7abbb8daa811d2f684dc.svg",
+    "static/media/planet-1.svg": "/static/media/planet-1.7a25994b8785272acf17d25752cc6be1.svg",
+    "static/media/wave-blue-dark.svg": "/static/media/wave-blue-dark.5da9b0502230f4ba24200ec8a4c8129e.svg",
+    "static/media/wave-grey-black.svg": "/static/media/wave-grey-black.af5a51e288016881bd1610d931d51c44.svg",
+    "static/media/wave-pink-black.svg": "/static/media/wave-pink-black.8b7a7b5ee7534ae452126055ca69d716.svg",
+    "static/media/wave-black.svg": "/static/media/wave-black.f43d7a0f512198646eeed921a5cd55f9.svg",
+    "static/media/wave-green.svg": "/static/media/wave-green.679332d2985c98ec919e899ec8e7a92e.svg",
+    "static/media/wave-blue-pink.svg": "/static/media/wave-blue-pink.beec2c6b3b800c47470560677b0b00c1.svg",
+    "static/media/wave-blue.svg": "/static/media/wave-blue.6a538c0e33124c080bc52fe97fc736bf.svg",
+    "static/media/wave-pink-white.svg": "/static/media/wave-pink-white.2d66f0278abea34ed069aea3a8902a7a.svg",
+    "static/media/wave-pink.svg": "/static/media/wave-pink.09f0fc89b557fc1f8328b729363f121e.svg",
+    "index.html": "/index.html",
+    "main.2b767d6e.css.map": "/static/css/main.2b767d6e.css.map",
+    "main.385b5bb4.js.map": "/static/js/main.385b5bb4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b767d6e.css",
+    "static/js/main.385b5bb4.js"
+  ]
+}
