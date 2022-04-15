@@ -34,26 +34,25 @@ const Home = ({bgcolor}) => {
 
   const callHomePage = async () => {
       try {
-          const res = await fetch("/home" , {
+          const res = await fetch("/api/home" , {
               method: "GET",
               headers: {
                   Accept: "application/json",
-                  "Content-Type": "application/json"
+                  "Content-Type": "application/"
               },
               credentials:"include"
           }); 
           
           const data = await res.json();
-      
           setUserData(data);
-       
+          console.log(data);
         
           if(!res.status === 200){
               const error = new Error(res.error);
               throw error;
           }
       } catch (error) {
-          console.log(error);
+          console.log("error" + error);
           navigate("/signin");
       }
   }
@@ -76,11 +75,7 @@ const Home = ({bgcolor}) => {
   const changeRoute5 = () => {
     navigate("/Safe-Use-Of-Anesthetic-Gases");
   }
-  const userName = userData.name;
-  const fadeLeft = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0 },
-  };
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])

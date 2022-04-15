@@ -20,7 +20,7 @@ const ConstrolledSubstances = () => {
     const [userData, setUserData] = useState({});
     const callHomePage = async () => {
         try {
-            const res = await fetch("/home" , {
+            const res = await fetch("/api/home" , {
                 method: "GET",
                 headers: {
                     Accept: "application/json",

@@ -17,13 +17,9 @@ app.use(express.json());
 app.use(cookieParser());
 
 // link the router files
-app.use(require("./router/auth"));
+app.use("/api", require("./router/auth"));
 
 const PORT = process.env.PORT || 5000;
-
-app.get("/signin", (req, res) => {
-  res.send("Hello world from the server");
-});
 
 app.get("/download1", (req, res) => {
   res.download("./pdfs/General-Safety.pdf");
@@ -41,18 +37,10 @@ app.get("/download5", (req, res) => {
   res.download("./pdfs/General-Safety.pdf");
 });
 
-app.get("/signup", (req, res) => {
-  res.send("Hello world from the server");
-});
-app.get("/logout", (req, res) => {
-  res.send("Hello world from the server");
-});
+app.use(express.static(path.join(__dirname, "client", "build")));
 
-app.use(express.static(path.join(__dirname, 'build')));
-
-
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 app.listen(PORT, () => {
