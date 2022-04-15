@@ -49,7 +49,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             About
           </SidebarLink>
           <SidebarLink to="discover" onClick={toggle}>
-            Modules
+            Discover
           </SidebarLink>
           <SidebarLinkR to="/home" onClick={toggle}>
             Modules
