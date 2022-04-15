@@ -37,7 +37,7 @@ const Signup = () => {
     const {name, email, supervisor, password, cpassword} = user;
     setErrors(validate(user));
     console.log("errors " + errors);
-    const res = await fetch("/register", {
+    const res = await fetch("/api/register", {
         method: "POST",
         headers:{
             "Content-Type" : "application/json"

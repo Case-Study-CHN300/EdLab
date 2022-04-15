@@ -44,7 +44,7 @@ const Admin = () => {
   const [allUsersData, setallUsersData] = useState({});
   const callHomePage = async () => {
       try {
-          const res = await fetch("/admin" , {
+          const res = await fetch("/api/admin" , {
               method: "GET",
               headers: {
                   Accept: "application/json",

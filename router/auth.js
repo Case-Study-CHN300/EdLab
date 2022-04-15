@@ -73,7 +73,7 @@ router.post("/signin", async (req, res) => {
 });
 
 router.get("/home", authenticate, (req, res) => {
-  res.send(req.rootUser);
+  res.json(req.rootUser);
 });
 
 router.post("/General-Safety", async (req, res) => {
@@ -93,10 +93,6 @@ router.post("/General-Safety", async (req, res) => {
     await rootUser.save();
   }
 });
-router.get("/General-Safety", authenticate, (req, res) => {
-  res.send(req.rootUser);
-});
-
 router.post("/Chemical-Safety", async (req, res) => {
   const { correct } = req.body;
   const token = req.cookies.jwtoken;
@@ -113,9 +109,6 @@ router.post("/Chemical-Safety", async (req, res) => {
 
     await rootUser.save();
   }
-});
-router.get("/Chemical-Safety", authenticate, (req, res) => {
-  res.send(req.rootUser);
 });
 
 router.post("/Controlled-Substances", async (req, res) => {
@@ -135,9 +128,6 @@ router.post("/Controlled-Substances", async (req, res) => {
     await rootUser.save();
   }
 });
-router.get("/Controlled-Substances", authenticate, (req, res) => {
-  res.send(req.rootUser);
-});
 
 router.post("/Formaldehyde", async (req, res) => {
   const { correct } = req.body;
@@ -156,9 +146,6 @@ router.post("/Formaldehyde", async (req, res) => {
     await rootUser.save();
   }
 });
-router.get("/Formaldehyde", authenticate, (req, res) => {
-  res.send(req.rootUser);
-});
 
 router.post("/Safe-Use-Of-Anesthetic-Gases", async (req, res) => {
   const { correct } = req.body;
@@ -176,9 +163,6 @@ router.post("/Safe-Use-Of-Anesthetic-Gases", async (req, res) => {
 
     await rootUser.save();
   }
-});
-router.get("/Safe-Use-Of-Anesthetic-Gases", authenticate, (req, res) => {
-  res.send(req.rootUser);
 });
 
 router.get("/admin", authenticate, (req, res) => {
