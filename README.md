@@ -13,7 +13,7 @@ Built with the MERN stack (MongoDB, Express, React and NodeJS).
   * [Author](#author)
 
 ## Introduction
-This is a full stack web application made using the MERN stack (MongoDB, Express, React & Nodejs), specially designed for students for online safety training for laboratories in IIT Roorkee. With this application, you can register/login, read, download different modules, attempt quizzes etc to your clients. Jump right off the [Live App](https://edlab.herokuapp.com/) or download the entire [Source code](https://github.com/Panshak/arcinvoice) and run it on your server. I'll appreciate you if can report any issue.
+This is a full stack web application made using the MERN stack (MongoDB, Express, React & Nodejs), specially designed for students for online safety training for laboratories in IIT Roorkee. With this application, you can register/login, read, download different modules, attempt quizzes etc to your clients. Jump right off the [Live App](https://edlab.herokuapp.com/) or download the entire [Source code](https://github.com/Case-Study-CHN300/EdLab) and run it on your server. I'll appreciate you if can report any issue.
 
 ![EdLab Signin](/client/public/signin.PNG)
 
