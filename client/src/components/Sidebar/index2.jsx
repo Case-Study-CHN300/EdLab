@@ -43,8 +43,20 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLinkR to="/home" onClick={toggle}>
-            Modules
+          <SidebarLinkR to="/General-Safety" onClick={toggle}>
+            General Safety
+          </SidebarLinkR>
+          <SidebarLinkR to="/Chemical-Safety" onClick={toggle}>
+            Chemical Safety
+          </SidebarLinkR>
+          <SidebarLinkR to="/Controlled-Substances" onClick={toggle}>
+            Controlled Substances
+          </SidebarLinkR>
+          <SidebarLinkR to="/Formaldehyde" onClick={toggle}>
+            Formaldehyde
+          </SidebarLinkR>
+          <SidebarLinkR to="/Safe-Use-Of-Anesthetic-Gases" onClick={toggle}>
+            Anesthetic Gases
           </SidebarLinkR>
         </SidebarMenu>
         <RenderMenu/>
