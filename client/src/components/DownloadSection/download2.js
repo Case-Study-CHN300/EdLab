@@ -21,7 +21,7 @@ const Download = () => {
   const download = (e) => {
     e.preventDefault();
     Axios({
-      url: "http://localhost:5000/download2",
+      url: "/download2",
       method: "GET",
       responseType: "blob",
     }).then((res) => {
